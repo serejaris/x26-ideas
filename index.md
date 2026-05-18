@@ -5,7 +5,7 @@
 
 | #   | идея                | дата       | статус      | папка                                                        | PRD                                                                        | центр                                                                              |
 | --- | ------------------- | ---------- | ----------- | ------------------------------------------------------------ | -------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
-| 001 | Первый продукт с AI | 2026-05-18 | 🟢 готово | [ideas/001-first-ai-product/](ideas/001-first-ai-product/) | [prd.md](ideas/001-first-ai-product/prd.md) | [index.html](ideas/001-first-ai-product/index.html) |
+| 001 | Первый продукт с AI | 2026-05-18 | 🟢 готово | [ideas/001-first-ai-product/](ideas/001-first-ai-product/) | [prd.md](https://github.com/serejaris/x26-ideas/blob/main/ideas/001-first-ai-product/prd.md) | [index.html](ideas/001-first-ai-product/index.html) |
 
 ## Соглашения
 

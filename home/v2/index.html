@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>x26-ideas · отдел идей — тёплая главная</title>
+    <meta name="description" content="x26-ideas — отдел HTML-идей: PRD, галерея и варианты визуализации. Быстро разберись в структуре и открой идею 001.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Nunito', 'ui-sans-serif', 'system-ui', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-sans bg-orange-50 text-stone-800 antialiased">
+
+    <nav class="border-b border-orange-200 bg-orange-100">
+        <div class="max-w-6xl mx-auto px-5 md:px-8 py-2 flex flex-wrap gap-4 text-sm text-stone-600">
+            <a href="../../index.html" class="hover:text-stone-900 underline decoration-stone-400 underline-offset-4">← Все версии главной</a>
+            <a href="brief.md" class="hover:text-stone-900 underline decoration-stone-400 underline-offset-4">Бриф v2</a>
+        </div>
+    </nav>
+
+    <header class="bg-orange-50">
+        <div class="max-w-6xl mx-auto px-5 md:px-8 py-8 md:py-12">
+            <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-violet-200 text-stone-800 font-bold text-sm mb-6 shadow-sm">
+                <span>отдел идей в HTML</span>
+            </div>
+            <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight tracking-tight text-stone-800 mb-6">
+                x26-ideas · <span class="bg-emerald-200 px-3 rounded-2xl">отдел идей</span>
+            </h1>
+            <p class="text-lg md:text-xl text-stone-700 mb-4 leading-relaxed max-w-2xl">
+                это личный отдел, где каждая идея живёт в своей папке: сначала PRD, потом HTML-галерея, потом варианты визуализации. без сборки, без зависимостей — открыл файл в браузере и смотришь.
+            </p>
+            <p class="text-lg md:text-xl text-stone-700 leading-relaxed max-w-2xl">
+                если ты здесь впервые — за пару секунд поймёшь, куда идти дальше: открой идею 001, сравни направления или загляни на публичный сайт.
+            </p>
+        </div>
+    </header>
+
+    <main>
+        <section class="bg-amber-50 py-16 md:py-24">
+            <div class="max-w-6xl mx-auto px-5 md:px-8">
+                <div class="max-w-3xl mb-10 md:mb-14">
+                    <div class="inline-block px-4 py-2 rounded-full bg-rose-200 text-stone-800 font-bold text-sm mb-5">🗺 как устроено</div>
+                    <h2 class="text-3xl md:text-4xl font-extrabold leading-tight text-stone-800 mb-4">
+                        три слоя — и ты уже внутри
+                    </h2>
+                    <p class="text-lg text-stone-700 leading-relaxed">
+                        структура повторяется для каждой идеи. один раз разобрался — дальше всё знакомо.
+                    </p>
+                </div>
+
+                <div class="grid md:grid-cols-3 gap-5 md:gap-6">
+                    <article class="bg-violet-200 rounded-3xl p-7 md:p-8 shadow-sm">
+                        <div class="w-12 h-12 rounded-full bg-orange-50 flex items-center justify-center font-extrabold text-lg text-stone-800 mb-4">1</div>
+                        <h3 class="text-xl font-extrabold text-stone-800 mb-3">PRD</h3>
+                        <p class="text-stone-700 leading-relaxed">
+                            <code class="text-sm font-bold">prd.md</code> — источник правды: аудитория, цель, что должно быть на странице. от него отталкиваются все варианты.
+                        </p>
+                    </article>
+
+                    <article class="bg-emerald-200 rounded-3xl p-7 md:p-8 shadow-sm">
+                        <div class="w-12 h-12 rounded-full bg-orange-50 flex items-center justify-center font-extrabold text-lg text-stone-800 mb-4">2</div>
+                        <h3 class="text-xl font-extrabold text-stone-800 mb-3">Галерея</h3>
+                        <p class="text-stone-700 leading-relaxed">
+                            <code class="text-sm font-bold">index.html</code> в папке идеи — хаб с описанием и карточками вариантов. отсюда переходишь на лендинги и брифы.
+                        </p>
+                    </article>
+
+                    <article class="bg-rose-200 rounded-3xl p-7 md:p-8 shadow-sm">
+                        <div class="w-12 h-12 rounded-full bg-orange-50 flex items-center justify-center font-extrabold text-lg text-stone-800 mb-4">3</div>
+                        <h3 class="text-xl font-extrabold text-stone-800 mb-3">Варианты</h3>
+                        <p class="text-stone-700 leading-relaxed">
+                            папки <code class="text-sm font-bold">v1/</code>, <code class="text-sm font-bold">v2/</code>, <code class="text-sm font-bold">v3/</code> — разные визуальные направления одной идеи. у каждого свой лендинг и бриф для копирования.
+                        </p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="bg-orange-50 py-16 md:py-24">
+            <div class="max-w-6xl mx-auto px-5 md:px-8">
+                <div class="max-w-3xl mb-10 md:mb-14">
+                    <div class="inline-block px-4 py-2 rounded-full bg-emerald-200 text-stone-800 font-bold text-sm mb-5">✨ первая идея</div>
+                    <h2 class="text-3xl md:text-4xl font-extrabold leading-tight text-stone-800 mb-4">
+                        начни с 001 — там уже всё готово
+                    </h2>
+                    <p class="text-lg text-stone-700 leading-relaxed">
+                        урок W4 Shipping: от сырой идеи до публичной ссылки, три визуальных направления лендинга.
+                    </p>
+                </div>
+
+                <article class="bg-violet-200 rounded-3xl p-8 md:p-10 shadow-md max-w-2xl">
+                    <p class="text-xs font-extrabold uppercase tracking-widest text-stone-600 mb-2">001</p>
+                    <h3 class="text-2xl md:text-3xl font-extrabold text-stone-800 mb-3">Первый продукт с AI</h3>
+                    <p class="text-stone-700 leading-relaxed mb-6">
+                        курс для тех, кто хочет собрать сайт, бот, MVP или прототип с AI. внутри — три варианта лендинга: спокойный, дружелюбный и смелый.
+                    </p>
+                    <div class="flex flex-wrap gap-4">
+                        <a href="../../ideas/001-first-ai-product/index.html" class="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-stone-800 text-orange-50 font-extrabold hover:bg-stone-700 transition shadow-sm">
+                            Галерея
+                            <span aria-hidden="true">→</span>
+                        </a>
+                        <a href="https://github.com/serejaris/x26-ideas/blob/main/ideas/001-first-ai-product/prd.md" class="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-orange-50 text-stone-800 font-extrabold hover:bg-amber-100 transition shadow-sm border border-stone-300" target="_blank" rel="noopener noreferrer">
+                            PRD
+                        </a>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section class="bg-amber-50 py-16 md:py-24">
+            <div class="max-w-6xl mx-auto px-5 md:px-8">
+                <div class="bg-emerald-200 rounded-3xl p-8 md:p-12 shadow-md relative overflow-hidden">
+                    <div class="absolute -top-8 -right-8 w-32 h-32 rounded-full bg-rose-200 opacity-80"></div>
+                    <div class="absolute -bottom-10 -left-10 w-40 h-40 rounded-full bg-violet-200 opacity-80"></div>
+                    <div class="relative">
+                        <div class="inline-block px-4 py-2 rounded-full bg-orange-50 text-stone-800 font-bold text-sm mb-5">🌐 публичный сайт</div>
+                        <h2 class="text-2xl md:text-3xl font-extrabold text-stone-800 mb-4">
+                            смотри онлайн на GitHub Pages
+                        </h2>
+                        <p class="text-lg text-stone-700 leading-relaxed mb-6 max-w-xl">
+                            после push в main всё обновляется автоматически. можно делиться ссылкой с участниками урока — открывается прямо в браузере.
+                        </p>
+                        <a href="https://serejaris.github.io/x26-ideas/" class="inline-flex items-center gap-2 px-7 py-3.5 rounded-full bg-stone-800 text-orange-50 font-extrabold hover:bg-stone-700 transition shadow-md">
+                            serejaris.github.io/x26-ideas
+                            <span aria-hidden="true">→</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-orange-50 border-t border-stone-200">
+        <div class="max-w-6xl mx-auto px-5 md:px-8 py-10 md:py-12">
+            <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+                <div>
+                    <p class="font-extrabold text-stone-800 mb-1">x26-ideas</p>
+                    <p class="text-stone-600 text-sm">отдел HTML-идей · PRD → галерея → варианты</p>
+                </div>
+                <nav class="flex flex-wrap gap-x-6 gap-y-2 text-sm text-stone-600">
+                    <a href="../../index.md" class="hover:text-stone-900 underline decoration-stone-400 underline-offset-4">index.md — реестр для агента</a>
+                    <a href="../../README.md" class="hover:text-stone-900 underline decoration-stone-400 underline-offset-4">README.md</a>
+                </nav>
+            </div>
+            <p class="mt-8 pt-6 border-t border-stone-200 text-sm text-stone-500">
+                главная v2 · Soft Friendly · сделано с теплом
+            </p>
+        </div>
+    </footer>
+
+</body>
+</html>

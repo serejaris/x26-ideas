@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>x26-ideas · отдел идей</title>
+  <meta name="description" content="Отдел HTML-идей: PRD, галерея и варианты визуализации. Быстрый вход в идею 001 и публичный сайт на GitHub Pages." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            serif: ['Fraunces', 'ui-serif', 'Georgia', 'serif'],
+            sans: ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+          },
+        },
+      },
+    };
+  </script>
+</head>
+
+<body class="bg-stone-50 text-stone-900 font-sans antialiased selection:bg-orange-100 selection:text-orange-900">
+
+  <nav class="border-b border-stone-200 bg-stone-100">
+    <div class="max-w-3xl mx-auto px-6 md:px-8 py-2 flex flex-wrap gap-4 text-sm text-stone-600">
+      <a href="../../index.html" class="hover:text-orange-800 transition-colors">← Все версии главной</a>
+      <a href="brief.md" class="hover:text-orange-800 transition-colors">Бриф v1</a>
+    </div>
+  </nav>
+
+  <header class="border-b border-stone-200">
+    <div class="max-w-3xl mx-auto px-6 md:px-8 py-6">
+      <p class="text-sm uppercase tracking-[0.2em] text-stone-500">x26</p>
+      <p class="font-serif text-lg tracking-tight text-stone-900 mt-1">x26-ideas · отдел идей</p>
+    </div>
+  </header>
+
+  <main>
+
+    <section class="max-w-3xl mx-auto px-6 md:px-8 pt-20 md:pt-28 pb-16 md:pb-24">
+      <p class="text-sm uppercase tracking-[0.2em] text-stone-500 mb-8">Отдел · HTML-артефакты</p>
+      <h1 class="font-serif font-light text-4xl md:text-5xl lg:text-6xl leading-[1.08] tracking-tight text-stone-900 mb-8">
+        Репозиторий <span class="italic text-orange-800">идей</span> — от&nbsp;PRD до&nbsp;готовой страницы.
+      </h1>
+      <p class="font-serif text-xl md:text-2xl leading-relaxed text-stone-600 max-w-2xl mb-6 font-light">
+        x26-ideas — это отдел, где каждая идея живёт в своей папке: сначала микро-PRD, затем галерея с карточками вариантов, затем отдельные HTML-лендинги без сборки и зависимостей.
+      </p>
+      <p class="text-stone-700 leading-relaxed max-w-2xl">
+        Здесь можно быстро сравнить визуальные направления, скопировать бриф версии и открыть публичную копию на GitHub Pages — всё статично, всё в браузере.
+      </p>
+    </section>
+
+    <div class="max-w-3xl mx-auto px-6 md:px-8">
+      <hr class="border-stone-200" />
+    </div>
+
+    <section class="max-w-3xl mx-auto px-6 md:px-8 py-16 md:py-24">
+      <p class="text-sm uppercase tracking-[0.2em] text-stone-500 mb-6">Как устроено</p>
+      <h2 class="font-serif text-3xl md:text-4xl font-light leading-tight text-stone-900 mb-14 max-w-2xl">
+        Три уровня — чтобы не&nbsp;путать источник правды и&nbsp;эксперименты.
+      </h2>
+
+      <ol class="space-y-12 md:space-y-14">
+        <li class="md:grid md:grid-cols-12 md:gap-10">
+          <p class="md:col-span-3 font-serif text-5xl md:text-6xl font-light text-orange-800 mb-4 md:mb-0">01</p>
+          <div class="md:col-span-9">
+            <h3 class="font-serif text-2xl text-stone-900 mb-3">PRD</h3>
+            <p class="text-stone-700 leading-relaxed">
+              Микро-описание идеи: аудитория, цель, обязательный контент. Один файл на идею — от него отталкиваются все варианты.
+            </p>
+          </div>
+        </li>
+
+        <li class="md:grid md:grid-cols-12 md:gap-10">
+          <p class="md:col-span-3 font-serif text-5xl md:text-6xl font-light text-orange-800 mb-4 md:mb-0">02</p>
+          <div class="md:col-span-9">
+            <h3 class="font-serif text-2xl text-stone-900 mb-3">Галерея</h3>
+            <p class="text-stone-700 leading-relaxed">
+              Центр идеи: краткое описание и карточки вариантов v1, v2, v3 — со ссылками на страницу и бриф каждого направления.
+            </p>
+          </div>
+          </div>
+        </li>
+
+        <li class="md:grid md:grid-cols-12 md:gap-10">
+          <p class="md:col-span-3 font-serif text-5xl md:text-6xl font-light text-orange-800 mb-4 md:mb-0">03</p>
+          <div class="md:col-span-9">
+            <h3 class="font-serif text-2xl text-stone-900 mb-3">Варианты</h3>
+            <p class="text-stone-700 leading-relaxed">
+              Отдельная папка на направление: один HTML-файл и brief.md с копией PRD плюс секцией «Дизайн-решения этой версии».
+            </p>
+          </div>
+        </li>
+      </ol>
+    </section>
+
+    <div class="max-w-3xl mx-auto px-6 md:px-8">
+      <hr class="border-stone-200" />
+    </div>
+
+    <section class="max-w-3xl mx-auto px-6 md:px-8 py-16 md:py-24">
+      <p class="text-sm uppercase tracking-[0.2em] text-stone-500 mb-6">Идеи</p>
+      <h2 class="font-serif text-3xl md:text-4xl font-light leading-tight text-stone-900 mb-10 max-w-2xl">
+        Сейчас в&nbsp;реестре одна идея — с&nbsp;готовыми вариантами лендинга.
+      </h2>
+
+      <article class="border border-stone-200 bg-stone-100/50 p-8 md:p-10">
+        <p class="text-xs uppercase tracking-[0.2em] text-stone-500 mb-2">001</p>
+        <h3 class="font-serif text-2xl md:text-3xl font-light text-stone-900 mb-2">Первый продукт с AI</h3>
+        <p class="text-sm text-stone-500 mb-4">2026-05-18 · варианты готовы</p>
+        <p class="text-stone-700 leading-relaxed mb-8 max-w-xl">
+          Урок W4 Shipping: от сырой идеи до публичной ссылки — три визуальных направления лендинга курса.
+        </p>
+        <div class="flex flex-wrap gap-4">
+          <a
+            href="../../ideas/001-first-ai-product/index.html"
+            class="inline-flex items-center justify-center px-6 py-3 bg-stone-900 text-stone-50 text-sm font-medium tracking-wide hover:bg-orange-800 transition-colors"
+          >
+            Галерея
+          </a>
+          <a
+            href="https://github.com/serejaris/x26-ideas/blob/main/ideas/001-first-ai-product/prd.md"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-flex items-center justify-center px-6 py-3 border border-stone-300 text-stone-800 text-sm font-medium tracking-wide hover:border-orange-800 hover:text-orange-800 transition-colors"
+          >
+            PRD
+          </a>
+        </div>
+      </article>
+    </section>
+
+    <div class="max-w-3xl mx-auto px-6 md:px-8">
+      <hr class="border-stone-200" />
+    </div>
+
+    <section class="max-w-3xl mx-auto px-6 md:px-8 py-16 md:py-20">
+      <p class="text-sm uppercase tracking-[0.2em] text-stone-500 mb-6">Публично</p>
+      <p class="font-serif text-xl md:text-2xl text-stone-700 leading-relaxed font-light max-w-2xl mb-6">
+        Статическая копия отдела на GitHub Pages — для гостей и участников урока без клонирования репозитория.
+      </p>
+      <a
+        href="https://serejaris.github.io/x26-ideas/"
+        class="inline-flex items-center text-stone-800 border-b border-stone-400 hover:border-orange-800 hover:text-orange-800 transition-colors pb-0.5"
+      >
+        https://serejaris.github.io/x26-ideas/
+      </a>
+    </section>
+
+  </main>
+
+  <footer class="border-t border-stone-200">
+    <div class="max-w-3xl mx-auto px-6 md:px-8 py-10 flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+      <p class="font-serif text-stone-700">x26-ideas · отдел идей</p>
+      <div class="flex flex-wrap gap-4 md:gap-8 text-sm text-stone-500">
+        <a href="../../index.md" class="hover:text-orange-800 transition-colors">Реестр для агента</a>
+        <a href="../../README.md" class="hover:text-orange-800 transition-colors">README</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

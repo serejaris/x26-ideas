@@ -43,13 +43,25 @@ flowchart LR
 
 ## Навигация
 
-Точка входа — [`index.html`](./index.html) в корне. Дальше по цепочке:
+Точка входа — [`index.html`](./index.html) в корне: **галерея трёх версий главной** (`home/v1`–`v3`) + карточка идеи 001. Дальше по цепочке:
 
 1. **Отдел** → галерея идеи + PRD.
 2. **Галерея** (`ideas/…/index.html`) — хаб: у каждого варианта две ссылки — **Страница** (лендинг) и **Бриф** (`.md`, можно выделить и скопировать).
 3. **Лендинг** (`v<N>/index.html`) — вверху ссылки «Галерея идеи» и «Бриф vN».
 
 Брифы открываются как plain text в браузере (`file://` или GitHub) — Cmd+A, копировать.
+
+### Версии главной (home)
+
+| | направление | открыть |
+|---|---|---|
+| v1 | **Editorial Calm** | [страница](home/v1/index.html) · [бриф](home/v1/brief.md) |
+| v2 | **Soft Friendly** | [страница](home/v2/index.html) · [бриф](home/v2/brief.md) |
+| v3 | **Modern Bold** | [страница](home/v3/index.html) · [бриф](home/v3/brief.md) |
+| v4 | **Index Shelf** (каталог) | [страница](home/v4/index.html) · [бриф](home/v4/brief.md) |
+| v5 | **Spatial Bento** | [страница](home/v5/index.html) · [бриф](home/v5/brief.md) |
+| v6 | **D3 Force Graph** | [страница](home/v6/index.html) · [бриф](home/v6/brief.md) |
+| v7 | **D3 Tree Explorer** | [страница](home/v7/index.html) · [бриф](home/v7/brief.md) |
 
 ## Текущие идеи
 
@@ -85,7 +97,10 @@ open ideas/001-first-ai-product/v1/index.html   # лендинг v1
 | что | где |
 |-----|-----|
 | настройка | репозиторий → **Settings** → **Pages** → Branch: `main`, Folder: `/` |
-| главная | https://serejaris.github.io/x26-ideas/ |
+| главная (галерея) | https://serejaris.github.io/x26-ideas/ |
+| главная v1 Editorial | https://serejaris.github.io/x26-ideas/home/v1/ |
+| главная v2 Soft | https://serejaris.github.io/x26-ideas/home/v2/ |
+| главная v3 Bold | https://serejaris.github.io/x26-ideas/home/v3/ |
 | галерея 001 | https://serejaris.github.io/x26-ideas/ideas/001-first-ai-product/ |
 | бриф v1 | https://serejaris.github.io/x26-ideas/ideas/001-first-ai-product/v1/brief.md |
 

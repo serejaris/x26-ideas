@@ -1,0 +1,363 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>x26-ideas · D3 Tree Explorer</title>
+  <meta name="description" content="Иерархическая библиотека идей x26-ideas: отдел → идея 001 → варианты v1–v3. D3 tree layout." />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+</head>
+<body class="bg-slate-50 text-slate-900 antialiased min-h-screen flex flex-col">
+
+  <nav class="border-b border-slate-200 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 py-2 flex flex-wrap gap-4 text-sm text-slate-500">
+      <a href="../../index.html" class="hover:text-teal-700 transition">← Галерея главных</a>
+      <a href="brief.md" class="hover:text-teal-700 transition">Бриф v7</a>
+    </div>
+  </nav>
+
+  <header class="border-b border-slate-200 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 py-10 md:py-14">
+      <p class="text-xs font-semibold uppercase tracking-widest text-teal-600 mb-3">x26-ideas · отдел идей</p>
+      <h1 class="text-3xl md:text-4xl font-bold tracking-tight text-slate-900">D3 Tree Explorer</h1>
+      <p class="mt-4 text-slate-600 max-w-2xl leading-relaxed">
+        Иерархическая библиотека HTML-идей: PRD → галерея → варианты. Кликайте узлы дерева слева — справа откроется карточка идеи или превью варианта.
+      </p>
+      <p class="mt-2 text-slate-500 max-w-2xl text-sm leading-relaxed">
+        Быстрый вход: идея 001 «Первый продукт с AI», три лендинга v1–v3, реестр и публичный сайт на GitHub Pages.
+      </p>
+      <a href="https://serejaris.github.io/x26-ideas/" class="inline-block mt-4 text-sm text-teal-700 underline underline-offset-4 hover:text-teal-900">serejaris.github.io/x26-ideas</a>
+
+      <div class="mt-8">
+        <p class="text-xs font-semibold uppercase tracking-widest text-slate-400 mb-3">Что внутри идеи 001</p>
+        <div class="grid grid-cols-3 gap-3 max-w-lg">
+          <button type="button" data-select="v1" class="thumbnail-btn group text-left rounded-lg overflow-hidden border border-slate-200 hover:border-teal-400 focus:outline-none focus:ring-2 focus:ring-teal-500 transition">
+            <div class="aspect-video bg-gradient-to-br from-stone-100 via-orange-50 to-stone-200 flex items-end p-2">
+              <span class="text-xs font-semibold text-stone-700 bg-white/80 px-1.5 py-0.5 rounded">v1 Editorial</span>
+            </div>
+          </button>
+          <button type="button" data-select="v2" class="thumbnail-btn group text-left rounded-lg overflow-hidden border border-slate-200 hover:border-teal-400 focus:outline-none focus:ring-2 focus:ring-teal-500 transition">
+            <div class="aspect-video bg-gradient-to-br from-orange-100 via-rose-50 to-amber-100 flex items-end p-2">
+              <span class="text-xs font-semibold text-stone-700 bg-white/80 px-1.5 py-0.5 rounded">v2 Soft</span>
+            </div>
+          </button>
+          <button type="button" data-select="v3" class="thumbnail-btn group text-left rounded-lg overflow-hidden border border-slate-200 hover:border-teal-400 focus:outline-none focus:ring-2 focus:ring-teal-500 transition">
+            <div class="aspect-video bg-gradient-to-br from-neutral-900 via-neutral-800 to-lime-900 flex items-end p-2">
+              <span class="text-xs font-semibold text-lime-300 bg-neutral-950/70 px-1.5 py-0.5 rounded">v3 Bold</span>
+            </div>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="flex-1 max-w-7xl w-full mx-auto px-4 sm:px-6 py-8">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8">
+
+      <section class="lg:col-span-5 rounded-xl border border-slate-200 bg-white overflow-hidden">
+        <div class="px-4 py-3 border-b border-slate-100 bg-slate-50">
+          <h2 class="text-xs font-semibold uppercase tracking-widest text-slate-500">Дерево идей</h2>
+        </div>
+        <div id="tree-container" class="overflow-x-auto p-4">
+          <svg id="tree-svg" class="w-full min-h-64" role="img" aria-label="Иерархия x26-ideas"></svg>
+        </div>
+      </section>
+
+      <section class="lg:col-span-7 rounded-xl border border-slate-200 bg-white overflow-hidden">
+        <div class="px-4 py-3 border-b border-slate-100 bg-slate-50">
+          <h2 class="text-xs font-semibold uppercase tracking-widest text-slate-500">Детали</h2>
+        </div>
+        <div id="detail-panel" class="p-6 md:p-8 min-h-64">
+          <p class="text-slate-400 text-sm">Выберите узел на дереве или миниатюру выше.</p>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <footer class="border-t border-slate-200 bg-white mt-auto">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 py-6 text-sm text-slate-500">
+      <a href="../../index.md" class="underline hover:text-slate-900">Реестр для агента</a>
+      ·
+      <a href="../../README.md" class="underline hover:text-slate-900">README</a>
+      ·
+      <span class="text-slate-400">v7 · D3 Tree Explorer</span>
+    </div>
+  </footer>
+
+  <script>
+    const DATA = {
+      id: 'root',
+      name: 'x26-ideas',
+      type: 'root',
+      children: [{
+        id: 'idea-001',
+        name: '001 · Первый продукт с AI',
+        type: 'idea',
+        title: '001 · Первый продукт с AI',
+        description: 'W4 Shipping: от идеи до публичной ссылки — галерея урока и три лендинга v1–v3. Курс для тех, кто хочет собрать первый продукт с AI без технической паники.',
+        gallery: '../../ideas/001-first-ai-product/index.html',
+        prd: 'https://github.com/serejaris/x26-ideas/blob/main/ideas/001-first-ai-product/prd.md',
+        children: [
+          {
+            id: 'v1',
+            name: 'v1 Editorial',
+            type: 'variant',
+            label: 'v1 Editorial Calm',
+            tagline: 'Книжный минимализм: stone, терракотовый акцент.',
+            landing: '../../ideas/001-first-ai-product/v1/index.html',
+            brief: '../../ideas/001-first-ai-product/v1/brief.md',
+            gradient: 'from-stone-100 via-orange-50 to-stone-200',
+            badge: 'text-stone-700 bg-white/80'
+          },
+          {
+            id: 'v2',
+            name: 'v2 Soft',
+            type: 'variant',
+            label: 'v2 Soft Friendly',
+            tagline: 'Пастель, скругления, тёплый тон на «ты».',
+            landing: '../../ideas/001-first-ai-product/v2/index.html',
+            brief: '../../ideas/001-first-ai-product/v2/brief.md',
+            gradient: 'from-orange-100 via-rose-50 to-amber-100',
+            badge: 'text-stone-700 bg-white/80'
+          },
+          {
+            id: 'v3',
+            name: 'v3 Bold',
+            type: 'variant',
+            label: 'v3 Modern Bold',
+            tagline: 'Тёмный фон, лаймовый акцент, уверенный «вы».',
+            landing: '../../ideas/001-first-ai-product/v3/index.html',
+            brief: '../../ideas/001-first-ai-product/v3/brief.md',
+            gradient: 'from-neutral-900 via-neutral-800 to-lime-900',
+            badge: 'text-lime-300 bg-neutral-950/70'
+          }
+        ]
+      }]
+    };
+
+    const VARIANTS = DATA.children[0].children;
+    const panel = document.getElementById('detail-panel');
+    let activeNodeId = null;
+    const briefCache = {};
+
+    function findNode(id, node) {
+      if (node.id === id) return node;
+      if (node.children) {
+        for (const child of node.children) {
+          const found = findNode(id, child);
+          if (found) return found;
+        }
+      }
+      return null;
+    }
+
+    function renderRootDetail() {
+      panel.innerHTML = `
+        <p class="text-xs font-semibold uppercase tracking-widest text-teal-600 mb-2">Корень</p>
+        <h3 class="text-2xl font-bold text-slate-900">x26-ideas · отдел идей</h3>
+        <p class="mt-4 text-slate-600 leading-relaxed">
+          Отдел HTML-идей без сборки: у каждой темы — микро-PRD, галерея и несколько визуальных направлений в чистом HTML с Tailwind через CDN.
+        </p>
+        <p class="mt-3 text-slate-500 text-sm leading-relaxed">
+          Раскройте узел «001 · Первый продукт с AI» на дереве или кликните миниатюру v1–v3 выше.
+        </p>
+        <div class="mt-6 flex flex-wrap gap-3">
+          <a href="https://serejaris.github.io/x26-ideas/" class="inline-flex rounded-lg border border-teal-600 bg-teal-600 px-4 py-2 text-sm font-medium text-white hover:bg-teal-700">Публичный сайт</a>
+          <a href="../../index.md" class="inline-flex rounded-lg border border-slate-300 px-4 py-2 text-sm font-medium hover:border-teal-600">Реестр</a>
+        </div>
+      `;
+    }
+
+    function renderIdeaDetail(node) {
+      panel.innerHTML = `
+        <p class="text-xs font-semibold uppercase tracking-widest text-teal-600 mb-2">Идея</p>
+        <h3 class="text-2xl font-bold text-slate-900">${node.title}</h3>
+        <p class="mt-4 text-slate-600 leading-relaxed">${node.description}</p>
+        <div class="mt-6 flex flex-wrap gap-3">
+          <a href="${node.gallery}" class="inline-flex rounded-lg border border-slate-900 bg-slate-900 px-4 py-2 text-sm font-medium text-white hover:bg-slate-800">Галерея</a>
+          <a href="${node.prd}" target="_blank" rel="noopener noreferrer" class="inline-flex rounded-lg border border-slate-300 px-4 py-2 text-sm font-medium hover:border-slate-900">PRD</a>
+        </div>
+        <div class="mt-8">
+          <p class="text-xs font-semibold uppercase tracking-widest text-slate-400 mb-3">Три варианта лендинга</p>
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+            ${VARIANTS.map(v => `
+              <button type="button" data-select="${v.id}" class="variant-card-btn text-left rounded-lg overflow-hidden border border-slate-200 hover:border-teal-400 transition focus:outline-none focus:ring-2 focus:ring-teal-500">
+                <div class="aspect-video bg-gradient-to-br ${v.gradient} flex items-end p-2">
+                  <span class="text-xs font-semibold ${v.badge} px-1.5 py-0.5 rounded">${v.label}</span>
+                </div>
+                <p class="p-2 text-xs text-slate-500">${v.tagline}</p>
+              </button>
+            `).join('')}
+          </div>
+        </div>
+      `;
+      bindVariantCardButtons();
+    }
+
+    function previewCardsHtml(activeId) {
+      return VARIANTS.map(v => `
+        <div class="rounded-lg overflow-hidden border ${v.id === activeId ? 'border-teal-500 ring-2 ring-teal-200' : 'border-slate-200'}">
+          <div class="aspect-video bg-gradient-to-br ${v.gradient} flex items-end p-2">
+            <span class="text-xs font-semibold ${v.badge} px-1.5 py-0.5 rounded">${v.label}</span>
+          </div>
+        </div>
+      `).join('');
+    }
+
+    function renderVariantDetail(node) {
+      panel.innerHTML = `
+        <p class="text-xs font-semibold uppercase tracking-widest text-teal-600 mb-2">Вариант</p>
+        <h3 class="text-2xl font-bold text-slate-900">${node.label}</h3>
+        <p class="mt-2 text-slate-500 text-sm">${node.tagline}</p>
+
+        <div class="mt-6 grid grid-cols-1 sm:grid-cols-3 gap-3">
+          ${previewCardsHtml(node.id)}
+        </div>
+
+        <div class="mt-6 flex flex-wrap gap-3">
+          <a href="${node.landing}" class="inline-flex rounded-lg border border-slate-900 bg-slate-900 px-4 py-2 text-sm font-medium text-white hover:bg-slate-800">Open landing</a>
+        </div>
+
+        <div class="mt-6 border border-slate-200 rounded-lg overflow-hidden">
+          <details class="brief-accordion group" data-brief="${node.brief}">
+            <summary class="cursor-pointer px-4 py-3 bg-slate-50 text-sm font-medium text-slate-700 hover:bg-slate-100 select-none list-none flex items-center justify-between">
+              <span>Expand brief</span>
+              <span class="text-slate-400 group-open:rotate-180 transition-transform">▼</span>
+            </summary>
+            <div class="brief-content border-t border-slate-200 bg-white">
+              <p class="p-4 text-sm text-slate-400">Загрузка brief.md…</p>
+            </div>
+          </details>
+        </div>
+      `;
+      bindBriefAccordions();
+    }
+
+    function selectNode(id) {
+      activeNodeId = id;
+      highlightTreeNodes();
+      const node = findNode(id, DATA);
+      if (!node) return;
+      if (node.type === 'root') renderRootDetail();
+      else if (node.type === 'idea') renderIdeaDetail(node);
+      else if (node.type === 'variant') renderVariantDetail(node);
+    }
+
+    function bindVariantCardButtons() {
+      panel.querySelectorAll('.variant-card-btn').forEach(btn => {
+        btn.addEventListener('click', () => selectNode(btn.dataset.select));
+      });
+    }
+
+    async function loadBrief(detailsEl) {
+      const url = detailsEl.dataset.brief;
+      const contentEl = detailsEl.querySelector('.brief-content');
+      if (briefCache[url]) {
+        contentEl.innerHTML = `<pre class="p-4 text-xs text-slate-700 whitespace-pre-wrap overflow-x-auto max-h-96 overflow-y-auto font-mono leading-relaxed">${briefCache[url]}</pre>`;
+        return;
+      }
+      try {
+        const res = await fetch(url);
+        if (!res.ok) throw new Error('HTTP ' + res.status);
+        const text = await res.text();
+        briefCache[url] = escapeHtml(text);
+        contentEl.innerHTML = `<pre class="p-4 text-xs text-slate-700 whitespace-pre-wrap overflow-x-auto max-h-96 overflow-y-auto font-mono leading-relaxed">${briefCache[url]}</pre>`;
+      } catch (e) {
+        contentEl.innerHTML = `<p class="p-4 text-sm text-red-600">Не удалось загрузить brief.md. <a href="${url}" class="underline">Открыть файл</a></p>`;
+      }
+    }
+
+    function escapeHtml(str) {
+      return str.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+    }
+
+    function bindBriefAccordions() {
+      panel.querySelectorAll('.brief-accordion').forEach(details => {
+        details.addEventListener('toggle', () => {
+          if (details.open) loadBrief(details);
+        });
+      });
+    }
+
+    document.querySelectorAll('.thumbnail-btn').forEach(btn => {
+      btn.addEventListener('click', () => selectNode(btn.dataset.select));
+    });
+
+    const svg = d3.select('#tree-svg');
+    const root = d3.hierarchy(DATA);
+    const treeLayout = d3.tree().nodeSize([36, 140]);
+    treeLayout(root);
+
+    const nodes = root.descendants();
+    const links = root.links();
+
+    const xs = nodes.map(d => d.x);
+    const ys = nodes.map(d => d.y);
+    const pad = 24;
+    const width = Math.max(320, d3.max(ys) + pad * 2);
+    const height = Math.max(240, d3.max(xs) - d3.min(xs) + pad * 2);
+
+    svg.attr('viewBox', `0 0 ${width} ${height}`);
+
+    const g = svg.append('g')
+      .attr('transform', `translate(${pad}, ${pad - d3.min(xs)})`);
+
+    g.selectAll('.link')
+      .data(links)
+      .join('path')
+      .attr('class', 'fill-none stroke-slate-300 stroke-[1.5]')
+      .attr('d', d3.linkHorizontal()
+        .x(d => d.y)
+        .y(d => d.x));
+
+    const node = g.selectAll('.node')
+      .data(nodes)
+      .join('g')
+      .attr('class', 'node cursor-pointer')
+      .attr('transform', d => `translate(${d.y},${d.x})`)
+      .attr('role', 'button')
+      .attr('tabindex', 0)
+      .on('click', (event, d) => selectNode(d.data.id))
+      .on('keydown', (event, d) => {
+        if (event.key === 'Enter' || event.key === ' ') {
+          event.preventDefault();
+          selectNode(d.data.id);
+        }
+      });
+
+    node.append('circle')
+      .attr('class', 'node-circle fill-white stroke-slate-400 stroke-2 r-5 transition-colors')
+      .attr('r', 5);
+
+    node.append('text')
+      .attr('class', 'node-label fill-slate-700 text-[11px] font-medium')
+      .attr('dy', '0.32em')
+      .attr('x', d => d.children ? -10 : 10)
+      .attr('text-anchor', d => d.children ? 'end' : 'start')
+      .text(d => d.data.name);
+
+    function highlightTreeNodes() {
+      node.selectAll('.node-circle')
+        .attr('class', d => {
+          const active = d.data.id === activeNodeId;
+          const base = 'node-circle r-5 transition-colors stroke-2';
+          if (active) return base + ' fill-teal-500 stroke-teal-700';
+          if (d.data.type === 'root') return base + ' fill-slate-100 stroke-slate-500';
+          if (d.data.type === 'idea') return base + ' fill-teal-100 stroke-teal-500';
+          return base + ' fill-white stroke-slate-400';
+        });
+      node.selectAll('.node-label')
+        .attr('class', d => {
+          const active = d.data.id === activeNodeId;
+          return active
+            ? 'node-label fill-teal-800 text-[11px] font-bold'
+            : 'node-label fill-slate-700 text-[11px] font-medium';
+        });
+    }
+
+    selectNode('root');
+  </script>
+</body>
+</html>
