@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Галерея вариантов · Первый продукт с AI</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-neutral-50 text-neutral-900 antialiased">
+    <main class="max-w-6xl mx-auto px-6 py-16 md:py-24">
+      <header class="mb-12 md:mb-16">
+        <p class="text-sm uppercase tracking-widest text-neutral-500 mb-3">Галерея</p>
+        <h1 class="text-4xl md:text-6xl font-bold tracking-tight mb-4">
+          Первый продукт с AI
+        </h1>
+        <p class="text-lg md:text-xl text-neutral-600 max-w-2xl">
+          Три направления дизайна для одностраничного лендинга. Открой любой и
+          посмотри, какое настроение ближе.
+        </p>
+        <p class="mt-4 text-sm text-neutral-500">
+          <a href="brief.md" class="underline hover:text-neutral-900">Исходный бриф</a>
+        </p>
+      </header>
+
+      <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- v1 -->
+        <a
+          href="v1/index.html"
+          class="group block rounded-2xl border border-stone-300 bg-stone-50 p-8 hover:border-stone-900 transition-colors"
+        >
+          <div class="flex items-center justify-between mb-8">
+            <span class="text-xs uppercase tracking-widest text-stone-500">v1</span>
+            <span class="font-serif italic text-stone-700">Editorial</span>
+          </div>
+          <h2 class="font-serif text-3xl text-stone-900 mb-3 leading-tight">
+            Спокойный <span class="italic text-orange-800">книжный</span> минимализм
+          </h2>
+          <p class="text-stone-600 text-sm leading-relaxed mb-6">
+            Много воздуха, серифные заголовки, тёплая палитра и один терракотовый
+            акцент. Тон — спокойный, человеческий, без хайпа.
+          </p>
+          <div class="flex items-center gap-4 text-sm">
+            <span class="text-stone-900 font-medium group-hover:underline">
+              Открыть лендинг →
+            </span>
+            <a
+              href="v1/brief.md"
+              class="text-stone-500 hover:text-stone-900 underline"
+              onclick="event.stopPropagation()"
+            >
+              бриф
+            </a>
+          </div>
+        </a>
+
+        <!-- v2 -->
+        <a
+          href="v2/index.html"
+          class="group block rounded-3xl border border-orange-200 bg-orange-50 p-8 hover:border-rose-400 transition-colors"
+        >
+          <div class="flex items-center justify-between mb-8">
+            <span class="text-xs uppercase tracking-widest text-rose-500">v2</span>
+            <span class="text-rose-600 font-semibold">Soft</span>
+          </div>
+          <h2 class="text-3xl font-extrabold text-stone-800 mb-3 leading-tight">
+            Тёплый и <span class="text-rose-600">дружелюбный</span>
+          </h2>
+          <p class="text-stone-700 text-sm leading-relaxed mb-6">
+            Пастельные карточки, скругления, лавандово-мятная палитра. Тон — на «ты»,
+            эмпатичный, как разговор с другом.
+          </p>
+          <div class="flex items-center gap-4 text-sm">
+            <span class="text-stone-900 font-medium group-hover:underline">
+              Открыть лендинг →
+            </span>
+            <a
+              href="v2/brief.md"
+              class="text-stone-500 hover:text-stone-900 underline"
+              onclick="event.stopPropagation()"
+            >
+              бриф
+            </a>
+          </div>
+        </a>
+
+        <!-- v3 -->
+        <a
+          href="v3/index.html"
+          class="group block rounded-md border border-neutral-800 bg-neutral-950 p-8 hover:border-lime-400 transition-colors"
+        >
+          <div class="flex items-center justify-between mb-8">
+            <span class="text-xs uppercase tracking-widest text-neutral-500">v3</span>
+            <span class="text-lime-400 font-mono text-sm">/// bold</span>
+          </div>
+          <h2 class="text-3xl font-black text-neutral-100 mb-3 leading-tight tracking-tight">
+            СОВРЕМЕННЫЙ <span class="text-lime-400">И&nbsp;РЕЗКИЙ</span>
+          </h2>
+          <p class="text-neutral-400 text-sm leading-relaxed mb-6">
+            Тёмный фон, кислотный акцент, строгая сетка, жирный гротеск. Тон — на
+            «вы», прямой, уверенный, без воды.
+          </p>
+          <div class="flex items-center gap-4 text-sm">
+            <span class="text-neutral-100 font-medium group-hover:underline">
+              Открыть лендинг →
+            </span>
+            <a
+              href="v3/brief.md"
+              class="text-neutral-500 hover:text-neutral-100 underline"
+              onclick="event.stopPropagation()"
+            >
+              бриф
+            </a>
+          </div>
+        </a>
+      </section>
+
+      <footer class="mt-16 md:mt-24 pt-8 border-t border-neutral-200 text-sm text-neutral-500">
+        <p>Три варианта одного брифа. Выбираем направление и доводим до финала.</p>
+      </footer>
+    </main>
+  </body>
+</html>

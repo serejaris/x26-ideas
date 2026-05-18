@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Первый продукт с AI — курс</title>
+  <meta name="description" content="Спокойный практический курс о том, как собрать свой первый сайт, бот, MVP или прототип с AI — без технической паники." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            serif: ['Fraunces', 'ui-serif', 'Georgia', 'serif'],
+            sans: ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+          },
+        },
+      },
+    };
+  </script>
+</head>
+
+<body class="bg-stone-50 text-stone-900 font-sans antialiased selection:bg-orange-100 selection:text-orange-900">
+
+  <header class="border-b border-stone-200">
+    <div class="max-w-3xl mx-auto px-6 md:px-8 py-6 flex items-center justify-between">
+      <a href="#" class="font-serif text-lg tracking-tight text-stone-900">Первый продукт с AI</a>
+      <a href="https://t.me/your_handle" class="text-sm text-stone-600 hover:text-orange-800 transition-colors">Написать в Telegram</a>
+    </div>
+  </header>
+
+  <main>
+
+    <section class="max-w-3xl mx-auto px-6 md:px-8 pt-24 md:pt-32 pb-20 md:pb-28">
+      <p class="text-sm uppercase tracking-[0.2em] text-stone-500 mb-8">Курс · набор открыт</p>
+      <h1 class="font-serif font-light text-5xl md:text-6xl lg:text-7xl leading-[1.05] tracking-tight text-stone-900 mb-8">
+        Соберите свой первый продукт с&nbsp;AI&nbsp;— <span class="italic text-orange-800">спокойно</span> и&nbsp;по&nbsp;шагам.
+      </h1>
+      <p class="font-serif text-xl md:text-2xl leading-relaxed text-stone-600 max-w-2xl mb-12 font-light">
+        Сайт, бот, MVP или прототип — без курса по программированию, без бессонных ночей и без ощущения, что вы что-то безнадёжно не догоняете.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 sm:items-center">
+        <a href="https://t.me/your_handle" class="inline-flex items-center justify-center px-6 py-3 bg-stone-900 text-stone-50 text-sm font-medium tracking-wide hover:bg-orange-800 transition-colors">
+          Написать в Telegram
+        </a>
+        <a href="#route" class="inline-flex items-center text-sm text-stone-600 hover:text-stone-900 transition-colors">
+          Посмотреть программу <span class="ml-2">↓</span>
+        </a>
+      </div>
+    </section>
+
+    <div class="max-w-3xl mx-auto px-6 md:px-8">
+      <hr class="border-stone-200" />
+    </div>
+
+    <section class="max-w-3xl mx-auto px-6 md:px-8 py-20 md:py-28">
+      <p class="text-sm uppercase tracking-[0.2em] text-stone-500 mb-6">Для кого</p>
+      <h2 class="font-serif text-3xl md:text-4xl font-light leading-tight text-stone-900 mb-12 max-w-2xl">
+        Если вы узнаёте себя хотя&nbsp;бы в&nbsp;одном из&nbsp;этих описаний&nbsp;— курс для&nbsp;вас.
+      </h2>
+
+      <div class="space-y-10 md:space-y-12">
+        <article class="md:grid md:grid-cols-12 md:gap-8">
+          <p class="md:col-span-3 font-serif text-orange-800 text-lg mb-2 md:mb-0">Предприниматель</p>
+          <p class="md:col-span-9 text-stone-700 leading-relaxed">
+            У вас есть идея продукта, но каждый раз, когда вы обращаетесь к разработчикам, разговор уходит в туман из терминов. Хочется собрать первую версию самому, чтобы говорить с командой на одном языке.
+          </p>
+        </article>
+
+        <article class="md:grid md:grid-cols-12 md:gap-8">
+          <p class="md:col-span-3 font-serif text-orange-800 text-lg mb-2 md:mb-0">Эксперт</p>
+          <p class="md:col-span-9 text-stone-700 leading-relaxed">
+            Вы знаете свою тему глубоко и хотите упаковать её в сайт, бот или небольшой сервис. Не для портфолио, а чтобы продавать и помогать людям — без полугодового спринта с подрядчиком.
+          </p>
+        </article>
+
+        <article class="md:grid md:grid-cols-12 md:gap-8">
+          <p class="md:col-span-3 font-serif text-orange-800 text-lg mb-2 md:mb-0">Дизайнер</p>
+          <p class="md:col-span-9 text-stone-700 leading-relaxed">
+            Вы привыкли работать с макетами и хотите научиться доводить их до живых, кликабельных продуктов. AI берёт на себя рутину, а вы остаётесь со своим главным — вкусом и решениями.
+          </p>
+        </article>
+
+        <article class="md:grid md:grid-cols-12 md:gap-8">
+          <p class="md:col-span-3 font-serif text-orange-800 text-lg mb-2 md:mb-0">Продакт</p>
+          <p class="md:col-span-9 text-stone-700 leading-relaxed">
+            Вы умеете описывать гипотезы и работать с командой, но хотите сами проверять идеи руками. Чтобы прототип появлялся не за месяц, а за выходные — и решение принималось на живом продукте.
+          </p>
+        </article>
+
+        <article class="md:grid md:grid-cols-12 md:gap-8">
+          <p class="md:col-span-3 font-serif text-orange-800 text-lg mb-2 md:mb-0">Специалист</p>
+          <p class="md:col-span-9 text-stone-700 leading-relaxed">
+            Маркетолог, методолог, аналитик, hr — кто угодно, кому хочется делать рабочие инструменты под себя и команду. Без того, чтобы становиться программистом в полном смысле слова.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <div class="max-w-3xl mx-auto px-6 md:px-8">
+      <hr class="border-stone-200" />
+    </div>
+
+    <section class="max-w-3xl mx-auto px-6 md:px-8 py-20 md:py-28">
+      <p class="text-sm uppercase tracking-[0.2em] text-stone-500 mb-6">Чего ждать и&nbsp;не&nbsp;ждать</p>
+      <h2 class="font-serif text-3xl md:text-4xl font-light leading-tight text-stone-900 mb-14 max-w-2xl">
+        Курс устроен так, чтобы вы возвращались домой с&nbsp;продуктом, а&nbsp;не&nbsp;со списком новых страхов.
+      </h2>
+
+      <div class="grid md:grid-cols-2 gap-10 md:gap-16">
+        <div>
+          <p class="font-serif text-xl text-stone-900 mb-6">Чего вы <span class="italic text-orange-800">не будете</span> делать</p>
+          <ul class="space-y-5 text-stone-700 leading-relaxed">
+            <li class="border-t border-stone-200 pt-5">Зубрить языки программирования и синтаксис.</li>
+            <li class="border-t border-stone-200 pt-5">Настраивать серверы, докеры и непонятные консоли.</li>
+            <li class="border-t border-stone-200 pt-5">Делать вид, что всё понятно, когда на самом деле нет.</li>
+            <li class="border-t border-stone-200 pt-5">Сравнивать себя с разработчиками с десятилетним опытом.</li>
+            <li class="border-t border-stone-200 pt-5">Учить теорию ради теории, без выхода на готовый результат.</li>
+          </ul>
+        </div>
+        <div>
+          <p class="font-serif text-xl text-stone-900 mb-6">Что вы <span class="italic text-orange-800">будете</span> делать</p>
+          <ul class="space-y-5 text-stone-700 leading-relaxed">
+            <li class="border-t border-stone-200 pt-5">Формулировать идею так, чтобы её понял и человек, и AI.</li>
+            <li class="border-t border-stone-200 pt-5">Собирать первый рабочий продукт небольшими, понятными шагами.</li>
+            <li class="border-t border-stone-200 pt-5">Учиться вести диалог с AI как со спокойным напарником.</li>
+            <li class="border-t border-stone-200 pt-5">Показывать продукт живым людям и слышать реальную обратную связь.</li>
+            <li class="border-t border-stone-200 pt-5">Понимать, когда стоит остановиться, а когда — продолжать.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <div class="max-w-3xl mx-auto px-6 md:px-8">
+      <hr class="border-stone-200" />
+    </div>
+
+    <section id="route" class="max-w-3xl mx-auto px-6 md:px-8 py-20 md:py-28">
+      <p class="text-sm uppercase tracking-[0.2em] text-stone-500 mb-6">Маршрут</p>
+      <h2 class="font-serif text-3xl md:text-4xl font-light leading-tight text-stone-900 mb-16 max-w-2xl">
+        Пять спокойных шагов от&nbsp;«у меня есть смутная идея» до&nbsp;«вот мой первый продукт».
+      </h2>
+
+      <ol class="space-y-16">
+        <li class="md:grid md:grid-cols-12 md:gap-10">
+          <p class="md:col-span-3 font-serif text-5xl md:text-6xl font-light text-orange-800 mb-4 md:mb-0">01</p>
+          <div class="md:col-span-9">
+            <h3 class="font-serif text-2xl text-stone-900 mb-3">Идея, очищенная от шума</h3>
+            <p class="text-stone-700 leading-relaxed">
+              Превращаем размытое «хочу что-то с AI» в одну ясную формулировку: для кого продукт, какую задачу решает, как выглядит в самой простой форме. После этого шага вы перестаёте бояться слова «MVP».
+            </p>
+          </div>
+        </li>
+
+        <li class="md:grid md:grid-cols-12 md:gap-10">
+          <p class="md:col-span-3 font-serif text-5xl md:text-6xl font-light text-orange-800 mb-4 md:mb-0">02</p>
+          <div class="md:col-span-9">
+            <h3 class="font-serif text-2xl text-stone-900 mb-3">Общий язык с AI</h3>
+            <p class="text-stone-700 leading-relaxed">
+              Учимся ставить задачи так, чтобы получать осмысленные ответы. Не «магия промптов», а спокойный навык разговора — какой важен и в работе с людьми, и в работе с любым инструментом.
+            </p>
+          </div>
+        </li>
+
+        <li class="md:grid md:grid-cols-12 md:gap-10">
+          <p class="md:col-span-3 font-serif text-5xl md:text-6xl font-light text-orange-800 mb-4 md:mb-0">03</p>
+          <div class="md:col-span-9">
+            <h3 class="font-serif text-2xl text-stone-900 mb-3">Первый каркас продукта</h3>
+            <p class="text-stone-700 leading-relaxed">
+              Собираем сайт, бота или прототип на инструментах, которые не требуют от вас знания кода в классическом смысле. Каждый шаг небольшой, обратимый и понятный.
+            </p>
+          </div>
+        </li>
+
+        <li class="md:grid md:grid-cols-12 md:gap-10">
+          <p class="md:col-span-3 font-serif text-5xl md:text-6xl font-light text-orange-800 mb-4 md:mb-0">04</p>
+          <div class="md:col-span-9">
+            <h3 class="font-serif text-2xl text-stone-900 mb-3">Доводка и опрятный вид</h3>
+            <p class="text-stone-700 leading-relaxed">
+              Приводим продукт в состояние, в котором его не стыдно показать. Аккуратные тексты, понятный интерфейс, рабочие ссылки. Без перфекционизма, но и без чувства «черновика».
+            </p>
+          </div>
+        </li>
+
+        <li class="md:grid md:grid-cols-12 md:gap-10">
+          <p class="md:col-span-3 font-serif text-5xl md:text-6xl font-light text-orange-800 mb-4 md:mb-0">05</p>
+          <div class="md:col-span-9">
+            <h3 class="font-serif text-2xl text-stone-900 mb-3">Встреча с пользователями</h3>
+            <p class="text-stone-700 leading-relaxed">
+              Показываем продукт первым живым людям, аккуратно собираем реакцию и решаем, что делать дальше: развивать, переосмыслять или спокойно закрыть и взяться за следующее.
+            </p>
+          </div>
+        </li>
+      </ol>
+    </section>
+
+    <div class="max-w-3xl mx-auto px-6 md:px-8">
+      <hr class="border-stone-200" />
+    </div>
+
+    <section class="max-w-3xl mx-auto px-6 md:px-8 py-20 md:py-28">
+      <p class="text-sm uppercase tracking-[0.2em] text-stone-500 mb-6">Результат</p>
+      <h2 class="font-serif text-3xl md:text-4xl font-light leading-tight text-stone-900 mb-10 max-w-2xl">
+        Через шесть недель у&nbsp;вас на&nbsp;руках&nbsp;— не&nbsp;конспект, а&nbsp;живой продукт.
+      </h2>
+      <p class="font-serif text-xl md:text-2xl text-stone-600 leading-relaxed font-light max-w-2xl mb-12">
+        Это может быть сайт-визитка вашей практики, чат-бот для постоянных клиентов, прототип нового сервиса или внутренний инструмент для команды. Что-то одно, доведённое до конца.
+      </p>
+
+      <dl class="grid md:grid-cols-2 gap-y-8 gap-x-12 border-t border-stone-200 pt-10">
+        <div>
+          <dt class="font-serif text-orange-800 text-lg mb-2">Сайт</dt>
+          <dd class="text-stone-700 leading-relaxed">Опрятная одностраничная история о вашей услуге или проекте — с понятным следующим шагом для читателя.</dd>
+        </div>
+        <div>
+          <dt class="font-serif text-orange-800 text-lg mb-2">Бот</dt>
+          <dd class="text-stone-700 leading-relaxed">Telegram-помощник, который отвечает на типовые вопросы, ведёт по сценарию или собирает заявки от клиентов.</dd>
+        </div>
+        <div>
+          <dt class="font-serif text-orange-800 text-lg mb-2">MVP</dt>
+          <dd class="text-stone-700 leading-relaxed">Минимальная рабочая версия сервиса, которую уже можно показать пользователям и проверить, есть ли спрос.</dd>
+        </div>
+        <div>
+          <dt class="font-serif text-orange-800 text-lg mb-2">Прототип</dt>
+          <dd class="text-stone-700 leading-relaxed">Кликабельная модель идеи, с которой можно идти на встречу с клиентом, инвестором или внутренней командой.</dd>
+        </div>
+      </dl>
+    </section>
+
+    <div class="max-w-3xl mx-auto px-6 md:px-8">
+      <hr class="border-stone-200" />
+    </div>
+
+    <section class="max-w-3xl mx-auto px-6 md:px-8 py-20 md:py-28">
+      <p class="text-sm uppercase tracking-[0.2em] text-stone-500 mb-6">Кто ведёт</p>
+      <div class="md:grid md:grid-cols-12 md:gap-10 items-start">
+        <div class="md:col-span-4 mb-8 md:mb-0">
+          <div class="aspect-[4/5] bg-stone-200 border border-stone-200 flex items-center justify-center">
+            <span class="text-stone-400 text-sm font-sans tracking-wide">фото</span>
+          </div>
+          <p class="font-serif text-lg text-stone-900 mt-4">Автор курса</p>
+          <p class="text-sm text-stone-500">Практик, не лектор</p>
+        </div>
+        <div class="md:col-span-8">
+          <p class="font-serif text-xl md:text-2xl text-stone-700 leading-relaxed font-light mb-6">
+            «Я сам прошёл путь от человека, который боялся открыть редактор кода, до того, кто собирает с AI рабочие продукты почти каждую неделю. Этот курс — то, что я хотел бы услышать в самом начале.»
+          </p>
+          <p class="text-stone-600 leading-relaxed">
+            Несколько лет помогаю предпринимателям и экспертам превращать идеи в работающие сервисы. Веду курс лично, отвечаю на вопросы в чате и слежу, чтобы никто не остался один на один с экраном.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <div class="max-w-3xl mx-auto px-6 md:px-8">
+      <hr class="border-stone-200" />
+    </div>
+
+    <section class="max-w-3xl mx-auto px-6 md:px-8 py-20 md:py-28">
+      <p class="text-sm uppercase tracking-[0.2em] text-stone-500 mb-6">Вопросы</p>
+      <h2 class="font-serif text-3xl md:text-4xl font-light leading-tight text-stone-900 mb-12 max-w-2xl">
+        Самые частые тревоги — и&nbsp;спокойные ответы на&nbsp;них.
+      </h2>
+
+      <div class="divide-y divide-stone-200 border-t border-b border-stone-200">
+        <details class="group py-6">
+          <summary class="flex items-start justify-between gap-6 cursor-pointer list-none">
+            <span class="font-serif text-xl text-stone-900">Я совсем не умею кодить. Точно справлюсь?</span>
+            <span class="font-serif text-2xl text-stone-400 group-open:rotate-45 transition-transform">+</span>
+          </summary>
+          <p class="text-stone-700 leading-relaxed mt-4 max-w-2xl">
+            Курс рассчитан именно на таких людей. Мы не учим программировать в классическом смысле — мы учимся думать о продукте и спокойно работать с AI как с помощником. Этого достаточно, чтобы дойти до первого результата.
+          </p>
+        </details>
+
+        <details class="group py-6">
+          <summary class="flex items-start justify-between gap-6 cursor-pointer list-none">
+            <span class="font-serif text-xl text-stone-900">А если у меня не получится?</span>
+            <span class="font-serif text-2xl text-stone-400 group-open:rotate-45 transition-transform">+</span>
+          </summary>
+          <p class="text-stone-700 leading-relaxed mt-4 max-w-2xl">
+            «Не получится» обычно означает «застрял на каком-то шаге». На курсе есть чат и регулярные встречи, где такие места разбираются. Главное — не сдаваться в одиночку, и у вас будет, к кому обратиться.
+          </p>
+        </details>
+
+        <details class="group py-6">
+          <summary class="flex items-start justify-between gap-6 cursor-pointer list-none">
+            <span class="font-serif text-xl text-stone-900">Сколько времени нужно в неделю?</span>
+            <span class="font-serif text-2xl text-stone-400 group-open:rotate-45 transition-transform">+</span>
+          </summary>
+          <p class="text-stone-700 leading-relaxed mt-4 max-w-2xl">
+            Около пяти-семи часов в неделю — это комфортный темп, при котором вы успеваете и работать, и жить, и не выгорать. Можно быстрее, но мы советуем именно спокойный ритм.
+          </p>
+        </details>
+
+        <details class="group py-6">
+          <summary class="flex items-start justify-between gap-6 cursor-pointer list-none">
+            <span class="font-serif text-xl text-stone-900">У меня пока нет чёткой идеи продукта.</span>
+            <span class="font-serif text-2xl text-stone-400 group-open:rotate-45 transition-transform">+</span>
+          </summary>
+          <p class="text-stone-700 leading-relaxed mt-4 max-w-2xl">
+            Это нормально и даже ожидаемо. Первый шаг курса как раз про то, как из набора смутных желаний достать одну ясную идею, с которой можно работать дальше.
+          </p>
+        </details>
+
+        <details class="group py-6">
+          <summary class="flex items-start justify-between gap-6 cursor-pointer list-none">
+            <span class="font-serif text-xl text-stone-900">Чем это отличается от ютуб-уроков по AI?</span>
+            <span class="font-serif text-2xl text-stone-400 group-open:rotate-45 transition-transform">+</span>
+          </summary>
+          <p class="text-stone-700 leading-relaxed mt-4 max-w-2xl">
+            Видео учат отдельным приёмам, но редко доводят до завершённого продукта. Здесь у вас есть маршрут, поддержка и живой человек, который не даст застрять. На выходе — не папка с конспектами, а готовая работа.
+          </p>
+        </details>
+
+        <details class="group py-6">
+          <summary class="flex items-start justify-between gap-6 cursor-pointer list-none">
+            <span class="font-serif text-xl text-stone-900">Что, если я не пойму, подходит ли мне курс?</span>
+            <span class="font-serif text-2xl text-stone-400 group-open:rotate-45 transition-transform">+</span>
+          </summary>
+          <p class="text-stone-700 leading-relaxed mt-4 max-w-2xl">
+            Напишите в Telegram. Это короткий, спокойный разговор: расскажете, чего хотите, я честно скажу, поможет ли курс именно вам. Никаких звонков с продавцами и давления.
+          </p>
+        </details>
+      </div>
+    </section>
+
+    <section class="max-w-3xl mx-auto px-6 md:px-8 py-24 md:py-32 text-center">
+      <p class="text-sm uppercase tracking-[0.2em] text-stone-500 mb-8">Следующий шаг</p>
+      <h2 class="font-serif text-4xl md:text-6xl font-light leading-[1.05] tracking-tight text-stone-900 mb-10">
+        Напишите в&nbsp;Telegram&nbsp;— и&nbsp;мы&nbsp;спокойно разберёмся, ваше&nbsp;ли&nbsp;это.
+      </h2>
+      <p class="font-serif text-xl text-stone-600 max-w-xl mx-auto leading-relaxed font-light mb-12">
+        Короткое сообщение от вас — и в ответ человеческий разговор, без скриптов и попыток вас уговорить.
+      </p>
+      <a href="https://t.me/your_handle" class="inline-flex items-center justify-center px-8 py-4 bg-stone-900 text-stone-50 text-base font-medium tracking-wide hover:bg-orange-800 transition-colors">
+        Написать в Telegram
+      </a>
+      <p class="text-sm text-stone-500 mt-6">Отвечаю обычно в течение дня.</p>
+    </section>
+  </main>
+
+  <footer class="border-t border-stone-200">
+    <div class="max-w-3xl mx-auto px-6 md:px-8 py-10 flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+      <p class="font-serif text-stone-700">Первый продукт с AI</p>
+      <div class="flex flex-col md:flex-row gap-3 md:gap-8 text-sm text-stone-500">
+        <a href="https://t.me/your_handle" class="hover:text-orange-800 transition-colors">Telegram</a>
+        <span class="hidden md:inline">·</span>
+        <span>© 2026, все права сохранены автору</span>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

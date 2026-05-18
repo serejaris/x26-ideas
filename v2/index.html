@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Первый продукт с AI — спокойно, понятно, без паники</title>
+    <meta name="description" content="Курс для тех, кто хочет собрать сайт, бот, MVP или прототип с AI, но не знает, с чего начать. Тёплый и понятный путь от идеи до первого рабочего продукта.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Nunito', 'ui-sans-serif', 'system-ui', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-sans bg-orange-50 text-stone-800 antialiased">
+
+    <header class="bg-orange-50">
+        <div class="max-w-6xl mx-auto px-5 md:px-8 py-5 flex items-center justify-between">
+            <a href="#" class="flex items-center gap-2">
+                <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-violet-200 text-stone-800 font-extrabold">AI</span>
+                <span class="font-extrabold text-lg text-stone-800">первый продукт</span>
+            </a>
+            <a href="https://t.me/your_handle" class="hidden md:inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-stone-800 text-orange-50 font-bold hover:bg-stone-700 transition shadow-sm">
+                написать в Telegram
+            </a>
+        </div>
+    </header>
+
+    <main>
+        <section class="bg-orange-50 pt-6 pb-20 md:pt-10 md:pb-28">
+            <div class="max-w-6xl mx-auto px-5 md:px-8">
+                <div class="grid lg:grid-cols-12 gap-10 lg:gap-14 items-center">
+                    <div class="lg:col-span-7">
+                        <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-violet-200 text-stone-800 font-bold text-sm mb-6 shadow-sm">
+                            <span>курс для тех, кто &laquo;не технарь&raquo;</span>
+                        </div>
+                        <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight tracking-tight text-stone-800 mb-6">
+                            собери свой <span class="bg-emerald-200 px-3 rounded-2xl">первый продукт</span> с AI — спокойно и без технической паники
+                        </h1>
+                        <p class="text-lg md:text-xl text-stone-700 mb-8 leading-relaxed max-w-xl">
+                            тёплый практический курс, после которого у тебя на руках будет работающий сайт, бот, MVP или прототип. без зубрёжки, без душных терминов, без &laquo;надо было раньше идти в айти&raquo;.
+                        </p>
+                        <div class="flex flex-col sm:flex-row gap-4 items-start sm:items-center">
+                            <a href="https://t.me/your_handle" class="inline-flex items-center gap-3 px-8 py-4 rounded-full bg-stone-800 text-orange-50 font-extrabold text-lg hover:bg-stone-700 transition shadow-md">
+                                написать в Telegram
+                                <span aria-hidden="true">→</span>
+                            </a>
+                            <span class="text-stone-600 text-sm md:text-base">отвечу лично, без ботов и автоворонок</span>
+                        </div>
+                    </div>
+                    <div class="lg:col-span-5">
+                        <div class="relative">
+                            <div class="absolute -top-6 -left-6 w-28 h-28 rounded-full bg-rose-200 shadow-sm"></div>
+                            <div class="absolute -bottom-8 -right-4 w-24 h-24 rounded-full bg-emerald-200 shadow-sm"></div>
+                            <div class="relative bg-amber-50 rounded-3xl p-8 shadow-md">
+                                <div class="space-y-4">
+                                    <div class="flex items-start gap-3 p-4 rounded-2xl bg-violet-200">
+                                        <span class="w-9 h-9 rounded-full bg-orange-50 flex items-center justify-center font-extrabold flex-shrink-0">1</span>
+                                        <div>
+                                            <div class="font-bold text-stone-800">идея → план</div>
+                                            <div class="text-sm text-stone-700">разбираем, что вообще хочется собрать</div>
+                                        </div>
+                                    </div>
+                                    <div class="flex items-start gap-3 p-4 rounded-2xl bg-emerald-200">
+                                        <span class="w-9 h-9 rounded-full bg-orange-50 flex items-center justify-center font-extrabold flex-shrink-0">2</span>
+                                        <div>
+                                            <div class="font-bold text-stone-800">AI собирает скелет</div>
+                                            <div class="text-sm text-stone-700">учимся разговаривать с моделью по делу</div>
+                                        </div>
+                                    </div>
+                                    <div class="flex items-start gap-3 p-4 rounded-2xl bg-rose-200">
+                                        <span class="w-9 h-9 rounded-full bg-orange-50 flex items-center justify-center font-extrabold flex-shrink-0">3</span>
+                                        <div>
+                                            <div class="font-bold text-stone-800">твой продукт в мире</div>
+                                            <div class="text-sm text-stone-700">показываем людям, получаем фидбек</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="bg-amber-50 py-20 md:py-28">
+            <div class="max-w-6xl mx-auto px-5 md:px-8">
+                <div class="max-w-3xl mb-12 md:mb-16">
+                    <div class="inline-block px-4 py-2 rounded-full bg-rose-200 text-stone-800 font-bold text-sm mb-5">🫶 я тебя понимаю</div>
+                    <h2 class="text-3xl md:text-4xl lg:text-5xl font-extrabold leading-tight text-stone-800 mb-5">
+                        если ты сейчас думаешь что-то из этого — это нормально
+                    </h2>
+                    <p class="text-lg text-stone-700 leading-relaxed">
+                        почти все приходят с такими мыслями. и почти все потом удивляются, как спокойно всё оказалось на самом деле.
+                    </p>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-5 md:gap-6">
+                    <article class="bg-violet-200 rounded-3xl p-7 md:p-8 shadow-sm">
+                        <div class="text-stone-800 font-extrabold text-xl md:text-2xl mb-3">&laquo;я гуманитарий, мне это не дано&raquo;</div>
+                        <p class="text-stone-700 leading-relaxed">
+                            спойлер: курс как раз для гуманитариев. тут не надо быть программистом — надо уметь думать словами и не бояться задавать вопросы. с этим у тебя точно всё хорошо.
+                        </p>
+                    </article>
+
+                    <article class="bg-emerald-200 rounded-3xl p-7 md:p-8 shadow-sm">
+                        <div class="text-stone-800 font-extrabold text-xl md:text-2xl mb-3">&laquo;я открою и ничего не пойму&raquo;</div>
+                        <p class="text-stone-700 leading-relaxed">
+                            мы идём маленькими шагами. каждый шаг короче, чем кажется. если застрял — пишешь мне, разбираемся вместе. никто тебя не оставит наедине с экраном.
+                        </p>
+                    </article>
+
+                    <article class="bg-rose-200 rounded-3xl p-7 md:p-8 shadow-sm">
+                        <div class="text-stone-800 font-extrabold text-xl md:text-2xl mb-3">&laquo;у меня нет идеи на миллион&raquo;</div>
+                        <p class="text-stone-700 leading-relaxed">
+                            и не надо. достаточно маленькой задачи, которую хочется решить себе или клиенту. идея на миллион вырастает потом, когда ты уже умеешь собирать продукты руками.
+                        </p>
+                    </article>
+
+                    <article class="bg-amber-200 rounded-3xl p-7 md:p-8 shadow-sm">
+                        <div class="text-stone-800 font-extrabold text-xl md:text-2xl mb-3">&laquo;уже поздно, все уже умеют&raquo;</div>
+                        <p class="text-stone-700 leading-relaxed">
+                            не умеют. на самом деле большинство людей всё ещё боится открыть chatgpt и попросить его что-то собрать. ты не опоздал — ты заходишь ровно тогда, когда это стало доступно.
+                        </p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="bg-orange-50 py-20 md:py-28">
+            <div class="max-w-6xl mx-auto px-5 md:px-8">
+                <div class="max-w-3xl mb-12 md:mb-16">
+                    <div class="inline-block px-4 py-2 rounded-full bg-emerald-200 text-stone-800 font-bold text-sm mb-5">✨ что у тебя получится</div>
+                    <h2 class="text-3xl md:text-4xl lg:text-5xl font-extrabold leading-tight text-stone-800 mb-5">
+                        четыре формата, из которых ты выберешь свой
+                    </h2>
+                    <p class="text-lg text-stone-700 leading-relaxed">
+                        к концу курса у тебя на руках — настоящий, работающий продукт. не папка с конспектами, а штука, которой можно поделиться.
+                    </p>
+                </div>
+
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-5 md:gap-6">
+                    <article class="bg-violet-200 rounded-3xl p-7 shadow-sm flex flex-col">
+                        <div class="w-14 h-14 rounded-2xl bg-orange-50 flex items-center justify-center text-2xl mb-5">🌐</div>
+                        <h3 class="text-xl font-extrabold text-stone-800 mb-3">свой сайт</h3>
+                        <p class="text-stone-700 leading-relaxed">
+                            одностраничник для продукта, услуги или личного бренда. с нормальным дизайном, текстами и кнопками, которые работают.
+                        </p>
+                    </article>
+
+                    <article class="bg-emerald-200 rounded-3xl p-7 shadow-sm flex flex-col">
+                        <div class="w-14 h-14 rounded-2xl bg-orange-50 flex items-center justify-center text-2xl mb-5">🤖</div>
+                        <h3 class="text-xl font-extrabold text-stone-800 mb-3">telegram-бот</h3>
+                        <p class="text-stone-700 leading-relaxed">
+                            бот-помощник, ассистент или мини-сервис. отвечает за тебя, экономит время, делает рутину.
+                        </p>
+                    </article>
+
+                    <article class="bg-rose-200 rounded-3xl p-7 shadow-sm flex flex-col">
+                        <div class="w-14 h-14 rounded-2xl bg-orange-50 flex items-center justify-center text-2xl mb-5">🚀</div>
+                        <h3 class="text-xl font-extrabold text-stone-800 mb-3">маленький MVP</h3>
+                        <p class="text-stone-700 leading-relaxed">
+                            первая рабочая версия твоего продукта. её уже можно показать людям и проверить, нужна ли вообще эта идея.
+                        </p>
+                    </article>
+
+                    <article class="bg-amber-200 rounded-3xl p-7 shadow-sm flex flex-col">
+                        <div class="w-14 h-14 rounded-2xl bg-orange-50 flex items-center justify-center text-2xl mb-5">🧩</div>
+                        <h3 class="text-xl font-extrabold text-stone-800 mb-3">прототип идеи</h3>
+                        <p class="text-stone-700 leading-relaxed">
+                            кликабельная штука, которую не стыдно принести инвестору, команде или клиенту. вместо &laquo;ну вот примерно так&raquo;.
+                        </p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="bg-amber-50 py-20 md:py-28">
+            <div class="max-w-6xl mx-auto px-5 md:px-8">
+                <div class="max-w-3xl mb-12 md:mb-16">
+                    <div class="inline-block px-4 py-2 rounded-full bg-violet-200 text-stone-800 font-bold text-sm mb-5">🗺 маршрут курса</div>
+                    <h2 class="text-3xl md:text-4xl lg:text-5xl font-extrabold leading-tight text-stone-800 mb-5">
+                        пять спокойных шагов — без рывков и марафонов
+                    </h2>
+                    <p class="text-lg text-stone-700 leading-relaxed">
+                        идём волной: чуть-чуть теории, сразу практика, передышка, снова шаг вперёд. так знание оседает, а не вылетает к утру.
+                    </p>
+                </div>
+
+                <ol class="grid md:grid-cols-2 lg:grid-cols-5 gap-5 md:gap-6">
+                    <li class="bg-violet-200 rounded-3xl p-6 shadow-sm lg:translate-y-0">
+                        <div class="w-12 h-12 rounded-full bg-orange-50 flex items-center justify-center font-extrabold text-lg text-stone-800 mb-4">01</div>
+                        <h3 class="font-extrabold text-stone-800 text-lg mb-2">найди свою идею</h3>
+                        <p class="text-stone-700 text-sm leading-relaxed">смотрим, что у тебя болит, и превращаем это в маленькую задачу.</p>
+                    </li>
+                    <li class="bg-emerald-200 rounded-3xl p-6 shadow-sm lg:translate-y-6">
+                        <div class="w-12 h-12 rounded-full bg-orange-50 flex items-center justify-center font-extrabold text-lg text-stone-800 mb-4">02</div>
+                        <h3 class="font-extrabold text-stone-800 text-lg mb-2">подружись с AI</h3>
+                        <p class="text-stone-700 text-sm leading-relaxed">учимся ставить запросы так, чтобы модель делала ровно то, что нужно.</p>
+                    </li>
+                    <li class="bg-rose-200 rounded-3xl p-6 shadow-sm lg:translate-y-0">
+                        <div class="w-12 h-12 rounded-full bg-orange-50 flex items-center justify-center font-extrabold text-lg text-stone-800 mb-4">03</div>
+                        <h3 class="font-extrabold text-stone-800 text-lg mb-2">собери скелет</h3>
+                        <p class="text-stone-700 text-sm leading-relaxed">первая рабочая версия продукта появляется уже на этом шаге.</p>
+                    </li>
+                    <li class="bg-amber-200 rounded-3xl p-6 shadow-sm lg:translate-y-6">
+                        <div class="w-12 h-12 rounded-full bg-orange-50 flex items-center justify-center font-extrabold text-lg text-stone-800 mb-4">04</div>
+                        <h3 class="font-extrabold text-stone-800 text-lg mb-2">причеши и оживи</h3>
+                        <p class="text-stone-700 text-sm leading-relaxed">тексты, дизайн, маленькие фишки — превращаем поделку в продукт.</p>
+                    </li>
+                    <li class="bg-violet-200 rounded-3xl p-6 shadow-sm lg:translate-y-0">
+                        <div class="w-12 h-12 rounded-full bg-orange-50 flex items-center justify-center font-extrabold text-lg text-stone-800 mb-4">05</div>
+                        <h3 class="font-extrabold text-stone-800 text-lg mb-2">покажи миру</h3>
+                        <p class="text-stone-700 text-sm leading-relaxed">выкатываем, получаем фидбек, радуемся первой реакции от живых людей.</p>
+                    </li>
+                </ol>
+            </div>
+        </section>
+
+        <section class="bg-orange-50 py-20 md:py-28">
+            <div class="max-w-6xl mx-auto px-5 md:px-8">
+                <div class="max-w-3xl mb-12 md:mb-16">
+                    <div class="inline-block px-4 py-2 rounded-full bg-rose-200 text-stone-800 font-bold text-sm mb-5">🤝 честно говоря</div>
+                    <h2 class="text-3xl md:text-4xl lg:text-5xl font-extrabold leading-tight text-stone-800 mb-5">
+                        курс подойдёт не всем — и это окей
+                    </h2>
+                    <p class="text-lg text-stone-700 leading-relaxed">
+                        лучше честно сразу, чем разочаровываться через неделю. посмотри, твоё это или нет.
+                    </p>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-5 md:gap-6">
+                    <div class="bg-emerald-200 rounded-3xl p-7 md:p-8 shadow-sm">
+                        <h3 class="text-2xl font-extrabold text-stone-800 mb-6">тебе подойдёт, если…</h3>
+                        <ul class="space-y-4">
+                            <li class="flex items-start gap-3">
+                                <span class="w-7 h-7 rounded-full bg-orange-50 flex items-center justify-center font-extrabold text-stone-800 flex-shrink-0 mt-0.5">✓</span>
+                                <span class="text-stone-800 leading-relaxed">у тебя крутится идея, но ты не знаешь, как её собрать руками</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <span class="w-7 h-7 rounded-full bg-orange-50 flex items-center justify-center font-extrabold text-stone-800 flex-shrink-0 mt-0.5">✓</span>
+                                <span class="text-stone-800 leading-relaxed">хочется не лекций, а реального продукта на выходе</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <span class="w-7 h-7 rounded-full bg-orange-50 flex items-center justify-center font-extrabold text-stone-800 flex-shrink-0 mt-0.5">✓</span>
+                                <span class="text-stone-800 leading-relaxed">ты готов делать маленькие шаги и задавать вопросы, даже если они кажутся глупыми</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <span class="w-7 h-7 rounded-full bg-orange-50 flex items-center justify-center font-extrabold text-stone-800 flex-shrink-0 mt-0.5">✓</span>
+                                <span class="text-stone-800 leading-relaxed">тебе важна тёплая атмосфера, а не &laquo;соберись, тряпка&raquo;</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="bg-rose-200 rounded-3xl p-7 md:p-8 shadow-sm">
+                        <h3 class="text-2xl font-extrabold text-stone-800 mb-6">скорее не твоё, если…</h3>
+                        <ul class="space-y-4">
+                            <li class="flex items-start gap-3">
+                                <span class="w-7 h-7 rounded-full bg-orange-50 flex items-center justify-center font-extrabold text-stone-800 flex-shrink-0 mt-0.5">×</span>
+                                <span class="text-stone-800 leading-relaxed">ты уже сеньор-разработчик и хочешь хардкор по архитектуре LLM</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <span class="w-7 h-7 rounded-full bg-orange-50 flex items-center justify-center font-extrabold text-stone-800 flex-shrink-0 mt-0.5">×</span>
+                                <span class="text-stone-800 leading-relaxed">ищешь волшебную кнопку &laquo;сделать миллион за выходные&raquo;</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <span class="w-7 h-7 rounded-full bg-orange-50 flex items-center justify-center font-extrabold text-stone-800 flex-shrink-0 mt-0.5">×</span>
+                                <span class="text-stone-800 leading-relaxed">не готов выделить хотя бы пару спокойных часов в неделю на практику</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <span class="w-7 h-7 rounded-full bg-orange-50 flex items-center justify-center font-extrabold text-stone-800 flex-shrink-0 mt-0.5">×</span>
+                                <span class="text-stone-800 leading-relaxed">хочется только посмотреть, не пробуя ничего своими руками</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="bg-amber-50 py-20 md:py-28">
+            <div class="max-w-6xl mx-auto px-5 md:px-8">
+                <div class="grid lg:grid-cols-12 gap-10 lg:gap-14 items-center">
+                    <div class="lg:col-span-5">
+                        <div class="relative inline-block">
+                            <div class="absolute -top-4 -left-4 w-20 h-20 rounded-full bg-violet-200"></div>
+                            <div class="absolute -bottom-4 -right-4 w-16 h-16 rounded-full bg-emerald-200"></div>
+                            <div class="relative w-56 h-56 md:w-72 md:h-72 rounded-full bg-rose-200 shadow-md flex items-center justify-center overflow-hidden">
+                                <span class="text-7xl md:text-8xl font-extrabold text-stone-800">🙂</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="lg:col-span-7">
+                        <div class="inline-block px-4 py-2 rounded-full bg-amber-200 text-stone-800 font-bold text-sm mb-5">👋 кто ведёт</div>
+                        <h2 class="text-3xl md:text-4xl lg:text-5xl font-extrabold leading-tight text-stone-800 mb-6">
+                            привет, я твой проводник в этот спокойный мир AI
+                        </h2>
+                        <div class="space-y-4 text-lg text-stone-700 leading-relaxed">
+                            <p>
+                                несколько лет назад я тоже сидел и думал: &laquo;ну всё, поезд ушёл, я ничего не понимаю в этих ваших нейросетях&raquo;. потом перестал бояться, начал тыкать — и оказалось, что собрать с AI первый продукт реально за пару вечеров.
+                            </p>
+                            <p>
+                                с тех пор помог десяткам людей сделать свой первый сайт, бот или прототип. без выгорания, без &laquo;ты опять туплю&raquo;, без чувства, что ты что-то должен миру. просто шаг за шагом.
+                            </p>
+                            <p class="text-stone-800 font-bold">
+                                если ты дочитал до этого места — мы точно сработаемся 🤍
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="bg-orange-50 py-20 md:py-28">
+            <div class="max-w-4xl mx-auto px-5 md:px-8">
+                <div class="mb-12 md:mb-16 text-center">
+                    <div class="inline-block px-4 py-2 rounded-full bg-emerald-200 text-stone-800 font-bold text-sm mb-5">💬 частые вопросы</div>
+                    <h2 class="text-3xl md:text-4xl lg:text-5xl font-extrabold leading-tight text-stone-800">
+                        то, о чём обычно спрашивают
+                    </h2>
+                </div>
+
+                <div class="space-y-4">
+                    <details class="group bg-violet-200 rounded-3xl p-6 md:p-7 shadow-sm">
+                        <summary class="flex items-center justify-between gap-4 cursor-pointer list-none">
+                            <span class="font-extrabold text-stone-800 text-lg md:text-xl">а если я вообще ни разу не писал код?</span>
+                            <span class="w-9 h-9 rounded-full bg-orange-50 flex items-center justify-center font-extrabold text-stone-800 flex-shrink-0 group-open:rotate-45 transition">+</span>
+                        </summary>
+                        <p class="mt-4 text-stone-700 leading-relaxed">
+                            идеально. курс как раз про это. ты не будешь писать код в классическом смысле — ты будешь объяснять AI, что хочешь, а собирать он будет сам. твоя задача — научиться нормально разговаривать с моделью.
+                        </p>
+                    </details>
+
+                    <details class="group bg-emerald-200 rounded-3xl p-6 md:p-7 shadow-sm">
+                        <summary class="flex items-center justify-between gap-4 cursor-pointer list-none">
+                            <span class="font-extrabold text-stone-800 text-lg md:text-xl">сколько времени это займёт?</span>
+                            <span class="w-9 h-9 rounded-full bg-orange-50 flex items-center justify-center font-extrabold text-stone-800 flex-shrink-0 group-open:rotate-45 transition">+</span>
+                        </summary>
+                        <p class="mt-4 text-stone-700 leading-relaxed">
+                            в среднем 3–5 часов в неделю. это не марафон с горящими глазами по 12 часов в день — это спокойный темп человека, у которого есть работа, дети, кот и ещё хоть какая-то жизнь.
+                        </p>
+                    </details>
+
+                    <details class="group bg-rose-200 rounded-3xl p-6 md:p-7 shadow-sm">
+                        <summary class="flex items-center justify-between gap-4 cursor-pointer list-none">
+                            <span class="font-extrabold text-stone-800 text-lg md:text-xl">а какие инструменты понадобятся?</span>
+                            <span class="w-9 h-9 rounded-full bg-orange-50 flex items-center justify-center font-extrabold text-stone-800 flex-shrink-0 group-open:rotate-45 transition">+</span>
+                        </summary>
+                        <p class="mt-4 text-stone-700 leading-relaxed">
+                            всё, что мы используем — либо бесплатное, либо стоит как одна чашка кофе в месяц. ничего страшного и платного на старте покупать не нужно. список я даю до начала, чтобы ты спокойно подготовился.
+                        </p>
+                    </details>
+
+                    <details class="group bg-amber-200 rounded-3xl p-6 md:p-7 shadow-sm">
+                        <summary class="flex items-center justify-between gap-4 cursor-pointer list-none">
+                            <span class="font-extrabold text-stone-800 text-lg md:text-xl">а если я не знаю, какой продукт собирать?</span>
+                            <span class="w-9 h-9 rounded-full bg-orange-50 flex items-center justify-center font-extrabold text-stone-800 flex-shrink-0 group-open:rotate-45 transition">+</span>
+                        </summary>
+                        <p class="mt-4 text-stone-700 leading-relaxed">
+                            это нормальное состояние на старте. отдельный шаг курса как раз про то, чтобы выудить из тебя идею, которая тебе самому интересна. часто люди приходят с пустыми руками и уходят с двумя проектами в голове.
+                        </p>
+                    </details>
+
+                    <details class="group bg-violet-200 rounded-3xl p-6 md:p-7 shadow-sm">
+                        <summary class="flex items-center justify-between gap-4 cursor-pointer list-none">
+                            <span class="font-extrabold text-stone-800 text-lg md:text-xl">будет ли поддержка, если я застряну?</span>
+                            <span class="w-9 h-9 rounded-full bg-orange-50 flex items-center justify-center font-extrabold text-stone-800 flex-shrink-0 group-open:rotate-45 transition">+</span>
+                        </summary>
+                        <p class="mt-4 text-stone-700 leading-relaxed">
+                            конечно. иначе зачем мы тут собрались. есть чат, есть прямой контакт со мной, есть разборы. с одиноким экраном тебя не оставлю — это противоречит самой идее курса.
+                        </p>
+                    </details>
+
+                    <details class="group bg-emerald-200 rounded-3xl p-6 md:p-7 shadow-sm">
+                        <summary class="flex items-center justify-between gap-4 cursor-pointer list-none">
+                            <span class="font-extrabold text-stone-800 text-lg md:text-xl">а как понять, что курс мне подойдёт?</span>
+                            <span class="w-9 h-9 rounded-full bg-orange-50 flex items-center justify-center font-extrabold text-stone-800 flex-shrink-0 group-open:rotate-45 transition">+</span>
+                        </summary>
+                        <p class="mt-4 text-stone-700 leading-relaxed">
+                            самый честный способ — написать мне в telegram. я задам пару вопросов про твою ситуацию и прямо скажу, твоё это или нет. без продаж в лоб, мне правда важно, чтобы ты дошёл до результата.
+                        </p>
+                    </details>
+                </div>
+            </div>
+        </section>
+
+        <section class="bg-amber-50 py-20 md:py-28">
+            <div class="max-w-5xl mx-auto px-5 md:px-8">
+                <div class="bg-violet-200 rounded-3xl p-8 md:p-14 lg:p-16 shadow-md relative overflow-hidden">
+                    <div class="absolute -top-10 -right-10 w-40 h-40 rounded-full bg-rose-200 opacity-80"></div>
+                    <div class="absolute -bottom-12 -left-12 w-48 h-48 rounded-full bg-emerald-200 opacity-80"></div>
+                    <div class="relative text-center">
+                        <div class="inline-block px-4 py-2 rounded-full bg-orange-50 text-stone-800 font-bold text-sm mb-6">🌱 готов начать?</div>
+                        <h2 class="text-3xl md:text-4xl lg:text-5xl font-extrabold leading-tight text-stone-800 mb-5">
+                            твой первый продукт ближе, чем кажется
+                        </h2>
+                        <p class="text-lg md:text-xl text-stone-700 max-w-2xl mx-auto mb-10 leading-relaxed">
+                            напиши мне в telegram пару слов о себе. я отвечу лично, расскажу подробности и помогу понять, твоё это или нет. без давления, без воронок, без &laquo;последние 3 места&raquo;.
+                        </p>
+                        <a href="https://t.me/your_handle" class="inline-flex items-center gap-3 px-10 py-5 rounded-full bg-stone-800 text-orange-50 font-extrabold text-lg md:text-xl hover:bg-stone-700 transition shadow-md">
+                            написать в Telegram
+                            <span aria-hidden="true">→</span>
+                        </a>
+                        <p class="text-stone-700 text-sm mt-6">обычно отвечаю в течение дня 🤍</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-orange-50 border-t border-stone-200">
+        <div class="max-w-6xl mx-auto px-5 md:px-8 py-10 md:py-12">
+            <div class="grid md:grid-cols-3 gap-8 items-start">
+                <div>
+                    <div class="flex items-center gap-2 mb-3">
+                        <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-violet-200 text-stone-800 font-extrabold">AI</span>
+                        <span class="font-extrabold text-lg text-stone-800">первый продукт</span>
+                    </div>
+                    <p class="text-stone-700 text-sm leading-relaxed">тёплый курс для тех, кто хочет собрать что-то своё с AI — и наконец перестать бояться технологий.</p>
+                </div>
+                <div>
+                    <h3 class="font-extrabold text-stone-800 mb-3">куда написать</h3>
+                    <ul class="space-y-2 text-stone-700">
+                        <li><a href="https://t.me/your_handle" class="hover:text-stone-800 underline decoration-stone-400 underline-offset-4">telegram автора</a></li>
+                        <li><a href="mailto:hello@example.com" class="hover:text-stone-800 underline decoration-stone-400 underline-offset-4">почта</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="font-extrabold text-stone-800 mb-3">по-человечески</h3>
+                    <p class="text-stone-700 text-sm leading-relaxed">никакого спама, агрессивных рассылок и манипуляций. только тёплые письма, когда правда есть что рассказать.</p>
+                </div>
+            </div>
+            <div class="mt-10 pt-6 border-t border-stone-200 flex flex-col md:flex-row items-start md:items-center justify-between gap-3 text-sm text-stone-600">
+                <span>© 2026 первый продукт с AI</span>
+                <span>сделано с теплом и без выгорания</span>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
