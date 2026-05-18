@@ -3,122 +3,340 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Идея 001 · Первый продукт с AI</title>
+    <title>Урок · От идеи до публичной ссылки</title>
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
-  <body class="bg-neutral-50 text-neutral-900 antialiased">
-    <main class="max-w-6xl mx-auto px-6 py-16 md:py-24">
-      <header class="mb-12 md:mb-16">
-        <p class="text-sm uppercase tracking-widest text-neutral-500 mb-3">Идея 001 · 2026-05-18</p>
-        <h1 class="text-4xl md:text-6xl font-bold tracking-tight mb-4">
-          Первый продукт с AI
-        </h1>
-        <p class="text-lg md:text-xl text-neutral-600 max-w-2xl">
-          Три направления дизайна для одностраничного лендинга. Открой любой и
-          посмотри, какое настроение ближе.
-        </p>
-        <p class="mt-4 text-sm text-neutral-500">
-          <a href="prd.md" class="underline hover:text-neutral-900">PRD</a>
-        </p>
+  <body class="bg-zinc-50 text-zinc-950 antialiased">
+    <main>
+      <header class="border-b border-zinc-200 bg-zinc-100">
+        <div class="mx-auto grid max-w-7xl gap-10 px-5 py-10 md:grid-cols-[1.25fr_0.75fr] md:px-8 md:py-16">
+          <section>
+            <p class="mb-4 text-xs font-semibold uppercase tracking-widest text-zinc-500">X26 · W4 Workshop · Shipping · 18 мая 2026</p>
+            <h1 class="max-w-4xl text-4xl font-black leading-none tracking-tight text-zinc-950 md:text-6xl">
+              От сырой идеи до публичной ссылки
+            </h1>
+            <p class="mt-6 max-w-2xl text-lg leading-relaxed text-zinc-700 md:text-xl">
+              Урок про то, как быстро превратить мысль в HTML-артефакт: получить первую плохую версию,
+              вытащить из неё бриф, собрать несколько визуальных вариантов, сохранить всё в репозиторий
+              и показать другому человеку по ссылке.
+            </p>
+            <div class="mt-8 flex flex-col gap-3 sm:flex-row">
+              <a
+                href="https://github.com/serejaris/x26-ideas"
+                class="inline-flex items-center justify-center border border-emerald-700 bg-emerald-700 px-5 py-3 text-sm font-semibold uppercase tracking-wide text-white transition hover:bg-emerald-800"
+              >
+                Публичный репозиторий
+              </a>
+              <a
+                href="https://github.com/serejaris/x26-ideas/tree/main/ideas/001-first-ai-product/prompts"
+                class="inline-flex items-center justify-center border border-zinc-300 px-5 py-3 text-sm font-semibold uppercase tracking-wide text-zinc-800 transition hover:border-zinc-950"
+              >
+                Материалы и промпты
+              </a>
+            </div>
+          </section>
+
+          <aside class="self-end border border-emerald-700 bg-emerald-50 p-5">
+            <p class="text-xs font-semibold uppercase tracking-widest text-emerald-800">Результат занятия</p>
+            <ol class="mt-5 space-y-4 text-sm leading-relaxed text-zinc-700">
+              <li><span class="font-semibold text-zinc-950">1.</span> Есть HTML-файл, который можно открыть без сборки.</li>
+              <li><span class="font-semibold text-zinc-950">2.</span> Есть короткий PRD/бриф, чтобы не начинать заново завтра.</li>
+              <li><span class="font-semibold text-zinc-950">3.</span> Есть 2-3 визуальных направления для сравнения.</li>
+              <li><span class="font-semibold text-zinc-950">4.</span> Есть публичная ссылка на репозиторий или опубликованную страницу.</li>
+            </ol>
+          </aside>
+        </div>
       </header>
 
-      <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        <!-- v1 -->
-        <a
-          href="v1/index.html"
-          class="group block rounded-2xl border border-stone-300 bg-stone-50 p-8 hover:border-stone-900 transition-colors"
-        >
-          <div class="flex items-center justify-between mb-8">
-            <span class="text-xs uppercase tracking-widest text-stone-500">v1</span>
-            <span class="font-serif italic text-stone-700">Editorial</span>
-          </div>
-          <h2 class="font-serif text-3xl text-stone-900 mb-3 leading-tight">
-            Спокойный <span class="italic text-orange-800">книжный</span> минимализм
-          </h2>
-          <p class="text-stone-600 text-sm leading-relaxed mb-6">
-            Много воздуха, серифные заголовки, тёплая палитра и один терракотовый
-            акцент. Тон — спокойный, человеческий, без хайпа.
+      <section class="mx-auto grid max-w-7xl gap-6 px-5 py-10 md:grid-cols-12 md:px-8 md:py-14">
+        <div class="md:col-span-4">
+          <p class="text-xs font-semibold uppercase tracking-widest text-zinc-500">Главная рамка</p>
+          <h2 class="mt-3 text-3xl font-black tracking-tight md:text-4xl">Сначала ссылка, потом продукт</h2>
+        </div>
+        <div class="space-y-4 text-base leading-relaxed text-zinc-700 md:col-span-8 md:text-lg">
+          <p>
+            Цель воркшопа не в том, чтобы сразу собрать большой сервис с базой данных, авторизацией и платежами.
+            Первый полезный результат намного проще: страница, демка или интерактивный прототип, который можно открыть,
+            потрогать и отправить другому человеку.
           </p>
-          <div class="flex items-center gap-4 text-sm">
-            <span class="text-stone-900 font-medium group-hover:underline">
-              Открыть лендинг →
-            </span>
-            <a
-              href="v1/brief.md"
-              class="text-stone-500 hover:text-stone-900 underline"
-              onclick="event.stopPropagation()"
-            >
-              бриф
-            </a>
-          </div>
-        </a>
-
-        <!-- v2 -->
-        <a
-          href="v2/index.html"
-          class="group block rounded-3xl border border-orange-200 bg-orange-50 p-8 hover:border-rose-400 transition-colors"
-        >
-          <div class="flex items-center justify-between mb-8">
-            <span class="text-xs uppercase tracking-widest text-rose-500">v2</span>
-            <span class="text-rose-600 font-semibold">Soft</span>
-          </div>
-          <h2 class="text-3xl font-extrabold text-stone-800 mb-3 leading-tight">
-            Тёплый и <span class="text-rose-600">дружелюбный</span>
-          </h2>
-          <p class="text-stone-700 text-sm leading-relaxed mb-6">
-            Пастельные карточки, скругления, лавандово-мятная палитра. Тон — на «ты»,
-            эмпатичный, как разговор с другом.
+          <p>
+            Это снижает страх перед кодом. HTML становится не профессией фронтендера, а рабочим форматом мышления:
+            идея превращается в видимую штуку, а видимая штука даёт следующий вопрос.
           </p>
-          <div class="flex items-center gap-4 text-sm">
-            <span class="text-stone-900 font-medium group-hover:underline">
-              Открыть лендинг →
-            </span>
-            <a
-              href="v2/brief.md"
-              class="text-stone-500 hover:text-stone-900 underline"
-              onclick="event.stopPropagation()"
-            >
-              бриф
-            </a>
-          </div>
-        </a>
-
-        <!-- v3 -->
-        <a
-          href="v3/index.html"
-          class="group block rounded-md border border-neutral-800 bg-neutral-950 p-8 hover:border-lime-400 transition-colors"
-        >
-          <div class="flex items-center justify-between mb-8">
-            <span class="text-xs uppercase tracking-widest text-neutral-500">v3</span>
-            <span class="text-lime-400 font-mono text-sm">/// bold</span>
-          </div>
-          <h2 class="text-3xl font-black text-neutral-100 mb-3 leading-tight tracking-tight">
-            СОВРЕМЕННЫЙ <span class="text-lime-400">И&nbsp;РЕЗКИЙ</span>
-          </h2>
-          <p class="text-neutral-400 text-sm leading-relaxed mb-6">
-            Тёмный фон, кислотный акцент, строгая сетка, жирный гротеск. Тон — на
-            «вы», прямой, уверенный, без воды.
-          </p>
-          <div class="flex items-center gap-4 text-sm">
-            <span class="text-neutral-100 font-medium group-hover:underline">
-              Открыть лендинг →
-            </span>
-            <a
-              href="v3/brief.md"
-              class="text-neutral-500 hover:text-neutral-100 underline"
-              onclick="event.stopPropagation()"
-            >
-              бриф
-            </a>
-          </div>
-        </a>
+        </div>
       </section>
 
-      <footer class="mt-16 md:mt-24 pt-8 border-t border-neutral-200 text-sm text-neutral-500">
-        <p>Три варианта одного PRD. Выбираем направление и доводим до финала.</p>
-        <p class="mt-2">
-          <a href="../../index.md" class="underline hover:text-neutral-900">← К реестру идей</a>
-        </p>
+      <section class="border-y border-zinc-200 bg-white">
+        <div class="mx-auto max-w-7xl px-5 py-10 md:px-8 md:py-14">
+          <div class="grid gap-px border border-zinc-200 bg-zinc-200 md:grid-cols-6">
+            <article class="bg-white p-5">
+              <p class="text-xs font-semibold uppercase tracking-widest text-emerald-700">01</p>
+              <h3 class="mt-5 text-xl font-bold tracking-tight">Идея</h3>
+              <p class="mt-3 text-sm leading-relaxed text-zinc-600">Сформулировать простую просьбу: сайт про меня, камера с фильтром, wishlist, генератор идей.</p>
+            </article>
+            <article class="bg-white p-5">
+              <p class="text-xs font-semibold uppercase tracking-widest text-emerald-700">02</p>
+              <h3 class="mt-5 text-xl font-bold tracking-tight">Первый HTML</h3>
+              <p class="mt-3 text-sm leading-relaxed text-zinc-600">Получить плохую, но работающую версию. Не спорить с ней, а смотреть, что в ней уже есть.</p>
+            </article>
+            <article class="bg-white p-5">
+              <p class="text-xs font-semibold uppercase tracking-widest text-emerald-700">03</p>
+              <h3 class="mt-5 text-xl font-bold tracking-tight">Интервью</h3>
+              <p class="mt-3 text-sm leading-relaxed text-zinc-600">Попросить AI задать три вопроса по одному: аудитория, цель, тон, ожидаемый результат.</p>
+            </article>
+            <article class="bg-white p-5">
+              <p class="text-xs font-semibold uppercase tracking-widest text-emerald-700">04</p>
+              <h3 class="mt-5 text-xl font-bold tracking-tight">Бриф</h3>
+              <p class="mt-3 text-sm leading-relaxed text-zinc-600">Сохранить контекст в короткий PRD: для кого, зачем, какой формат, какие ограничения.</p>
+            </article>
+            <article class="bg-white p-5">
+              <p class="text-xs font-semibold uppercase tracking-widest text-emerald-700">05</p>
+              <h3 class="mt-5 text-xl font-bold tracking-tight">Варианты</h3>
+              <p class="mt-3 text-sm leading-relaxed text-zinc-600">Сгенерировать несколько направлений и сравнивать не «красиво/некрасиво», а сетку, тон, акценты.</p>
+            </article>
+            <article class="bg-white p-5">
+              <p class="text-xs font-semibold uppercase tracking-widest text-emerald-700">06</p>
+              <h3 class="mt-5 text-xl font-bold tracking-tight">Shipping</h3>
+              <p class="mt-3 text-sm leading-relaxed text-zinc-600">Сохранить репозиторий, сделать галерею вариантов и получить публичную ссылку.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="mx-auto grid max-w-7xl gap-10 px-5 py-12 md:grid-cols-[0.8fr_1.2fr] md:px-8 md:py-16">
+        <div>
+          <p class="text-xs font-semibold uppercase tracking-widest text-zinc-500">Методика</p>
+          <h2 class="mt-3 text-3xl font-black tracking-tight md:text-4xl">Что держит урок</h2>
+          <p class="mt-5 max-w-md text-base leading-relaxed text-zinc-700">
+            Урок строится не вокруг списка инструментов, а вокруг повторяемого цикла. Инструменты можно менять:
+            ChatGPT, Claude, Gemini, LM Arena, Cursor, Codex. Метод остаётся тем же.
+          </p>
+        </div>
+        <div class="grid gap-4">
+          <article class="border-l-4 border-emerald-700 bg-white p-5">
+            <h3 class="text-lg font-bold">Учебная эмоция: «я могу это открыть»</h3>
+            <p class="mt-2 text-sm leading-relaxed text-zinc-600">
+              Первая победа не качество дизайна, а факт, что участник получил файл или ссылку. Поэтому стартовый сайт может быть плохим.
+            </p>
+          </article>
+          <article class="border-l-4 border-emerald-700 bg-white p-5">
+            <h3 class="text-lg font-bold">AI как коллега, а не магическая кнопка</h3>
+            <p class="mt-2 text-sm leading-relaxed text-zinc-600">
+              Хорошая практика: говорить простыми просьбами, просить вопросы, уточнять тон, сохранять решения в бриф.
+            </p>
+          </article>
+          <article class="border-l-4 border-emerald-700 bg-white p-5">
+            <h3 class="text-lg font-bold">Визуальная насмотренность через сравнение</h3>
+            <p class="mt-2 text-sm leading-relaxed text-zinc-600">
+              Участники смотрят на чужие результаты и называют конкретное: сетка, типографика, палитра, акцент, настроение.
+            </p>
+          </article>
+          <article class="border-l-4 border-emerald-700 bg-white p-5">
+            <h3 class="text-lg font-bold">Репозиторий как память идеи</h3>
+            <p class="mt-2 text-sm leading-relaxed text-zinc-600">
+              Папка с PRD, HTML и промптами нужна, чтобы завтра продолжить не с пустого чата, а с уже собранного контекста.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="border-y border-sky-200 bg-sky-50">
+        <div class="mx-auto grid max-w-7xl gap-8 px-5 py-12 md:grid-cols-[0.7fr_1.3fr] md:px-8 md:py-16">
+          <div>
+            <p class="text-xs font-semibold uppercase tracking-widest text-zinc-500">Инструменты</p>
+            <h2 class="mt-3 text-3xl font-black tracking-tight md:text-4xl">Не список сервисов, а роли</h2>
+          </div>
+          <div class="grid gap-px border border-sky-200 bg-sky-200 sm:grid-cols-2">
+            <article class="bg-white p-5">
+              <h3 class="text-lg font-bold">Чат и Canvas</h3>
+              <p class="mt-2 text-sm leading-relaxed text-zinc-600">Быстрый старт: попросить сайт, открыть preview, скачать HTML, поделиться черновой ссылкой.</p>
+            </article>
+            <article class="bg-white p-5">
+              <h3 class="text-lg font-bold">LM Arena и разные модели</h3>
+              <p class="mt-2 text-sm leading-relaxed text-zinc-600">Тренировать глазомер: сравнивать версии, выбирать сильный результат, замечать стиль моделей.</p>
+            </article>
+            <article class="bg-white p-5">
+              <h3 class="text-lg font-bold">Gemini, Claude, Codex, Cursor</h3>
+              <p class="mt-2 text-sm leading-relaxed text-zinc-600">Переходить от игрушечной демки к файлам: сохранить бриф, править HTML, делать варианты.</p>
+            </article>
+            <article class="bg-white p-5">
+              <h3 class="text-lg font-bold">GitHub, Vercel, Netlify Drop</h3>
+              <p class="mt-2 text-sm leading-relaxed text-zinc-600">Довести до shipping: репозиторий как память проекта, хостинг как публичная ссылка.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="bg-zinc-950 text-zinc-50">
+        <div class="mx-auto max-w-7xl px-5 py-12 md:px-8 md:py-16">
+          <div class="grid gap-8 md:grid-cols-[0.75fr_1.25fr]">
+            <div>
+              <p class="text-xs font-semibold uppercase tracking-widest text-zinc-400">Промпты</p>
+              <h2 class="mt-3 text-3xl font-black tracking-tight md:text-4xl">Папка материалов</h2>
+              <p class="mt-5 max-w-md text-base leading-relaxed text-zinc-300">
+                Это не один большой промпт, а набор маленьких шагов. Их удобно давать студентам по очереди
+                или запускать агентом внутри демо-репозитория.
+              </p>
+            </div>
+            <div class="grid gap-px border border-zinc-800 bg-zinc-800 sm:grid-cols-2">
+              <a href="prompts/01-one-shot-site.md" class="block bg-zinc-950 p-5 transition hover:bg-zinc-900">
+                <p class="text-xs font-semibold uppercase tracking-widest text-zinc-500">01</p>
+                <h3 class="mt-4 text-lg font-bold">Первый HTML</h3>
+                <p class="mt-2 text-sm leading-relaxed text-zinc-400">Быстро получить плохую, но видимую версию.</p>
+              </a>
+              <a href="prompts/02-design-interview.md" class="block bg-zinc-950 p-5 transition hover:bg-zinc-900">
+                <p class="text-xs font-semibold uppercase tracking-widest text-zinc-500">02</p>
+                <h3 class="mt-4 text-lg font-bold">Три вопроса</h3>
+                <p class="mt-2 text-sm leading-relaxed text-zinc-400">Собрать аудиторию, цель и тон через короткое интервью.</p>
+              </a>
+              <a href="prompts/03-extract-micro-prd.md" class="block bg-zinc-950 p-5 transition hover:bg-zinc-900">
+                <p class="text-xs font-semibold uppercase tracking-widest text-zinc-500">03</p>
+                <h3 class="mt-4 text-lg font-bold">Микро-PRD</h3>
+                <p class="mt-2 text-sm leading-relaxed text-zinc-400">Превратить чат и прототип в reusable brief.</p>
+              </a>
+              <a href="prompts/04-generate-variants.md" class="block bg-zinc-950 p-5 transition hover:bg-zinc-900">
+                <p class="text-xs font-semibold uppercase tracking-widest text-zinc-500">04</p>
+                <h3 class="mt-4 text-lg font-bold">Три варианта</h3>
+                <p class="mt-2 text-sm leading-relaxed text-zinc-400">Развести дизайн-направления по папкам v1/v2/v3.</p>
+              </a>
+              <a href="prompts/05-gallery-index.md" class="block bg-zinc-950 p-5 transition hover:bg-zinc-900">
+                <p class="text-xs font-semibold uppercase tracking-widest text-zinc-500">05</p>
+                <h3 class="mt-4 text-lg font-bold">Галерея</h3>
+                <p class="mt-2 text-sm leading-relaxed text-zinc-400">Собрать центр идеи с карточками вариантов.</p>
+              </a>
+              <a href="prompts/06-repo-and-publish.md" class="block bg-zinc-950 p-5 transition hover:bg-zinc-900">
+                <p class="text-xs font-semibold uppercase tracking-widest text-zinc-500">06</p>
+                <h3 class="mt-4 text-lg font-bold">Репозиторий и ссылка</h3>
+                <p class="mt-2 text-sm leading-relaxed text-zinc-400">Сохранить проект и подготовить публичную выдачу.</p>
+              </a>
+              <a href="prompts/07-review-and-remix.md" class="block bg-zinc-950 p-5 transition hover:bg-zinc-900 sm:col-span-2">
+                <p class="text-xs font-semibold uppercase tracking-widest text-zinc-500">07</p>
+                <h3 class="mt-4 text-lg font-bold">Разбор и ремикс</h3>
+                <p class="mt-2 text-sm leading-relaxed text-zinc-400">Понять, что именно понравилось, и перенести сильные решения в следующую версию.</p>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="mx-auto max-w-7xl px-5 py-12 md:px-8 md:py-16">
+        <div class="grid gap-8 md:grid-cols-[0.7fr_1.3fr]">
+          <div>
+            <p class="text-xs font-semibold uppercase tracking-widest text-zinc-500">Демо-репозиторий</p>
+            <h2 class="mt-3 text-3xl font-black tracking-tight md:text-4xl">Как читать эту папку</h2>
+          </div>
+          <div class="grid gap-4 md:grid-cols-2">
+            <article class="border border-zinc-200 bg-white p-5">
+              <h3 class="font-bold">prd.md</h3>
+              <p class="mt-2 text-sm leading-relaxed text-zinc-600">Источник смысла: аудитория, цель и ожидаемый результат идеи.</p>
+            </article>
+            <article class="border border-zinc-200 bg-white p-5">
+              <h3 class="font-bold">index.html</h3>
+              <p class="mt-2 text-sm leading-relaxed text-zinc-600">Этот урок: маршрут, методический контекст и ссылки на материалы.</p>
+            </article>
+            <article class="border border-zinc-200 bg-white p-5">
+              <h3 class="font-bold">prompts/</h3>
+              <p class="mt-2 text-sm leading-relaxed text-zinc-600">Копируемые команды для повторения процесса с другой идеей.</p>
+            </article>
+            <article class="border border-zinc-200 bg-white p-5">
+              <h3 class="font-bold">v1 / v2 / v3</h3>
+              <p class="mt-2 text-sm leading-relaxed text-zinc-600">Три визуальных направления одного PRD: editorial, friendly, bold.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="border-y border-zinc-200 bg-white">
+        <div class="mx-auto max-w-7xl px-5 py-12 md:px-8 md:py-16">
+          <div class="grid gap-8 md:grid-cols-[0.75fr_1.25fr]">
+            <div>
+              <p class="text-xs font-semibold uppercase tracking-widest text-zinc-500">Версии</p>
+              <h2 class="mt-3 text-3xl font-black tracking-tight md:text-4xl">Сравнение направлений</h2>
+            </div>
+            <div class="grid gap-4">
+              <article class="grid gap-4 border border-zinc-200 p-5 md:grid-cols-[0.3fr_1fr_auto] md:items-center">
+                <p class="text-xs font-semibold uppercase tracking-widest text-zinc-400">v1</p>
+                <div>
+                  <h3 class="font-bold">Editorial Calm</h3>
+                  <p class="mt-1 text-sm leading-relaxed text-zinc-600">Спокойный книжный минимализм: много воздуха, тёплая палитра, доверительная интонация.</p>
+                </div>
+                <div class="flex flex-wrap gap-3 md:justify-end">
+                  <a href="v1/index.html" class="inline-flex border border-zinc-950 bg-zinc-950 px-4 py-2 text-xs font-semibold uppercase tracking-wide text-zinc-50 transition hover:bg-zinc-800">Страница</a>
+                  <a href="v1/brief.md" class="inline-flex border border-zinc-300 px-4 py-2 text-xs font-semibold uppercase tracking-wide text-zinc-800 transition hover:border-zinc-950">Бриф</a>
+                </div>
+              </article>
+              <article class="grid gap-4 border border-zinc-200 p-5 md:grid-cols-[0.3fr_1fr_auto] md:items-center">
+                <p class="text-xs font-semibold uppercase tracking-widest text-zinc-400">v2</p>
+                <div>
+                  <h3 class="font-bold">Soft Friendly</h3>
+                  <p class="mt-1 text-sm leading-relaxed text-zinc-600">Тёплая, дружелюбная версия с пастельными карточками и тоном на «ты».</p>
+                </div>
+                <div class="flex flex-wrap gap-3 md:justify-end">
+                  <a href="v2/index.html" class="inline-flex border border-zinc-950 bg-zinc-950 px-4 py-2 text-xs font-semibold uppercase tracking-wide text-zinc-50 transition hover:bg-zinc-800">Страница</a>
+                  <a href="v2/brief.md" class="inline-flex border border-zinc-300 px-4 py-2 text-xs font-semibold uppercase tracking-wide text-zinc-800 transition hover:border-zinc-950">Бриф</a>
+                </div>
+              </article>
+              <article class="grid gap-4 border border-zinc-200 p-5 md:grid-cols-[0.3fr_1fr_auto] md:items-center">
+                <p class="text-xs font-semibold uppercase tracking-widest text-zinc-400">v3</p>
+                <div>
+                  <h3 class="font-bold">Modern Bold</h3>
+                  <p class="mt-1 text-sm leading-relaxed text-zinc-600">Строгая сетка, тёмный контраст, лаймовый акцент, уверенный продуктовый тон.</p>
+                </div>
+                <div class="flex flex-wrap gap-3 md:justify-end">
+                  <a href="v3/index.html" class="inline-flex border border-zinc-950 bg-zinc-950 px-4 py-2 text-xs font-semibold uppercase tracking-wide text-zinc-50 transition hover:bg-zinc-800">Страница</a>
+                  <a href="v3/brief.md" class="inline-flex border border-zinc-300 px-4 py-2 text-xs font-semibold uppercase tracking-wide text-zinc-800 transition hover:border-zinc-950">Бриф</a>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="mx-auto max-w-7xl px-5 py-12 md:px-8 md:py-16">
+        <div class="grid gap-8 md:grid-cols-[0.7fr_1.3fr]">
+          <div>
+            <p class="text-xs font-semibold uppercase tracking-widest text-zinc-500">Ведущему</p>
+            <h2 class="mt-3 text-3xl font-black tracking-tight md:text-4xl">Как провести</h2>
+          </div>
+          <div class="space-y-4">
+            <details class="group border border-zinc-200 bg-white p-5">
+              <summary class="cursor-pointer list-none font-bold">Старт: эмоция недели и быстрый опрос</summary>
+              <p class="mt-3 text-sm leading-relaxed text-zinc-600">
+                Попросить участников назвать инструмент недели и одну эмоцию. Это включает личный контекст и показывает, что у всех разные входные точки.
+              </p>
+            </details>
+            <details class="group border border-zinc-200 bg-white p-5">
+              <summary class="cursor-pointer list-none font-bold">Демо: первый плохой сайт</summary>
+              <p class="mt-3 text-sm leading-relaxed text-zinc-600">
+                Запрос «сделай сайт про меня» нужен как безопасный вход. Не оценивать результат как финальный, а использовать его как сырьё.
+              </p>
+            </details>
+            <details class="group border border-zinc-200 bg-white p-5">
+              <summary class="cursor-pointer list-none font-bold">Обсуждение: что именно понравилось</summary>
+              <p class="mt-3 text-sm leading-relaxed text-zinc-600">
+                Просить не «нравится/не нравится», а конкретику: цвет, сетка, типографика, один акцент, язык, настроение.
+              </p>
+            </details>
+            <details class="group border border-zinc-200 bg-white p-5">
+              <summary class="cursor-pointer list-none font-bold">Финал: ссылка и сохранённый контекст</summary>
+              <p class="mt-3 text-sm leading-relaxed text-zinc-600">
+                Урок считается закрытым, когда у участника есть файл, бриф и понятный следующий шаг: продолжить в агенте, положить в репозиторий или опубликовать.
+              </p>
+            </details>
+          </div>
+        </div>
+      </section>
+
+      <footer class="border-t border-zinc-200 bg-zinc-100">
+        <div class="mx-auto flex max-w-7xl flex-col gap-4 px-5 py-8 text-sm text-zinc-600 md:flex-row md:items-center md:justify-between md:px-8">
+          <p>Идея 001 · Первый продукт с AI · урок и материалы к W4 Shipping.</p>
+          <div class="flex flex-wrap gap-4">
+            <a href="../../index.html" class="underline decoration-zinc-400 underline-offset-4 hover:text-zinc-950">Отдел идей</a>
+            <a href="../../index.md" class="underline decoration-zinc-400 underline-offset-4 hover:text-zinc-950">Реестр (md)</a>
+            <a href="prd.md" class="underline decoration-zinc-400 underline-offset-4 hover:text-zinc-950">PRD</a>
+            <a href="prompts/README.md" class="underline decoration-zinc-400 underline-offset-4 hover:text-zinc-950">Промпты</a>
+          </div>
+        </div>
       </footer>
     </main>
   </body>
